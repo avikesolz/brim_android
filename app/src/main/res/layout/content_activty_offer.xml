@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    android:orientation="vertical" android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="wrap_content">
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:background="#FFFFFF"
+            android:layout_height="wrap_content">
+            <ImageView
+                android:src="@drawable/userimg"
+                android:layout_width="match_parent"
+                android:scaleType="fitXY"
+                android:layout_height="200dp" />
+            <com.brim.Font.AxiformaRegular
+                android:textColor="#414042"
+                android:text="ZARA Canada"
+                android:textSize="17sp"
+                android:paddingLeft="20dp"
+                android:paddingTop="15dp"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content" />
+
+            <com.brim.Font.SFNFTextView
+                android:layout_width="wrap_content"
+                android:paddingLeft="20dp"
+                android:paddingTop="10dp"
+                android:textColor="#414042"
+                android:textSize="12sp"
+                android:text="Earn 3x pts when you shop at Zara using this card."
+                android:layout_height="wrap_content" />
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_weight="1"
+                android:paddingLeft="20dp"
+                android:paddingBottom="15dp"
+
+                android:paddingTop="10dp"
+                android:gravity="center_vertical"
+                android:orientation="horizontal">
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:src="@drawable/ic_icon_time" />
+
+                <com.brim.Font.AxiformaBook
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content"
+                    android:paddingLeft="10dp"
+                    android:text="2 days left"
+                    android:textColor="#4A4A4A"
+                    android:textAllCaps="true"
+                    android:textSize="13sp" />
+            </LinearLayout>
+        </LinearLayout>
+
+    <LinearLayout
+        android:layout_marginTop="30dp"
+        android:background="#FFFFFF"
+        android:orientation="vertical"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+        <com.brim.Font.AxiformaRegular
+            android:layout_width="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:textColor="#414042"
+            android:paddingBottom="15dp"
+            android:text="Participating Locations Near Me"
+            android:layout_height="wrap_content" />
+
+        <ImageView
+            android:src="@drawable/map"
+            android:layout_width="match_parent"
+            android:scaleType="fitXY"
+            android:layout_height="500dp" />
+
+    </LinearLayout>
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="horizontal"
+        android:background="#FFFFFF"
+        android:paddingLeft="20dp"
+        android:paddingTop="15sp"
+        android:gravity="center_vertical"
+        android:paddingBottom="15dp"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_icon_marker"
+            android:layout_height="wrap_content" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:paddingLeft="15dp"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+
+            <com.brim.Font.AxiformaRegular
+                android:layout_width="wrap_content"
+                android:text="341 Queen St W, Toronto, ON M5V 2A4"
+                android:textColor="#414042"
+                android:textSize="12sp"
+                android:layout_height="wrap_content" />
+            <com.brim.Font.AxiformaBook
+                android:layout_width="wrap_content"
+                android:text="Queen West"
+                android:textColor="#808080"
+                android:textSize="10sp"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:paddingLeft="20dp"
+            android:paddingTop="15sp"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_icon_marker"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:paddingLeft="15dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <com.brim.Font.AxiformaRegular
+                    android:layout_width="wrap_content"
+                    android:text="220 Yonge St, Toronto, ON M5B 2H1"
+                    android:textColor="#414042"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+                <com.brim.Font.AxiformaBook
+                    android:layout_width="wrap_content"
+                    android:text="Eaton Centre"
+                    android:textColor="#808080"
+                    android:textSize="10sp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <LinearLayout
+            android:layout_marginTop="2dp"
+            android:layout_width="match_parent"
+            android:orientation="horizontal"
+            android:background="#FFFFFF"
+            android:paddingLeft="20dp"
+            android:paddingTop="15sp"
+            android:gravity="center_vertical"
+            android:paddingBottom="15dp"
+            android:layout_height="wrap_content">
+
+            <ImageView
+                android:layout_width="wrap_content"
+                android:src="@drawable/ic_icon_marker"
+                android:layout_height="wrap_content" />
+
+            <LinearLayout
+                android:layout_width="wrap_content"
+                android:paddingLeft="15dp"
+                android:orientation="vertical"
+                android:layout_height="wrap_content">
+
+                <com.brim.Font.AxiformaRegular
+                    android:layout_width="wrap_content"
+                    android:text="50 Bloor St W, Toronto, ON M4W 3L8"
+                    android:textColor="#414042"
+                    android:textSize="12sp"
+                    android:layout_height="wrap_content" />
+                <com.brim.Font.AxiformaBook
+                    android:layout_width="wrap_content"
+                    android:text="Holt Renfrew Centre"
+                    android:textColor="#808080"
+                    android:textSize="10sp"
+                    android:layout_height="wrap_content" />
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="30dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="#FFFFFF"
+                android:layout_height="40dp">
+
+                <com.brim.Font.SFNFTextView
+                    android:layout_width="wrap_content"
+                    android:text="Transactions at Zara"
+                    android:textAllCaps="true"
+                    android:paddingLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content" />
+
+
+                <ImageView
+                    android:id="@+id/IMG_Right2"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_icon_caret_grey"
+                    android:layout_centerVertical="true"
+                    android:rotation="90"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content" />
+                <com.brim.Font.SFNFTextView
+                    android:text="Last 90 Days"
+                    android:paddingRight="5dp"
+                    android:layout_centerVertical="true"
+                    android:textAllCaps="true"
+                    android:layout_toLeftOf="@+id/IMG_Right2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+
+
+</ScrollView>

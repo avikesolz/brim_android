@@ -1,0 +1,70 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    >
+
+    <com.brim.Font.AxiformaRegular
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:text="TOTAL SPEND"
+        android:textSize="11sp"
+        android:gravity="center"
+        android:textColor="@color/textlightGray"
+        />
+
+    <com.brim.Font.AxiformaRegular
+        android:id="@+id/txt_grand_total"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:layout_marginTop="5dp"
+        android:text=""
+        android:textSize="22sp"
+        android:gravity="center"
+        android:textColor="@color/textDarkGray"
+        />
+
+    <RelativeLayout
+        android:id="@+id/button_type"
+        android:layout_width="match_parent"
+        android:layout_height="30dp"
+        android:gravity="center_horizontal"
+        >
+
+        <Spinner
+            android:id="@+id/spinner_date"
+            android:layout_width="wrap_content"
+            android:layout_height="match_parent"
+            android:spinnerMode="dropdown"
+            android:background="@android:color/transparent"
+            android:overlapAnchor="false"
+
+            >
+
+        </Spinner>
+
+        <ImageView
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_toRightOf="@+id/spinner_date"
+            android:padding="5dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/down_grey"
+            />
+
+
+    </RelativeLayout>
+
+
+
+    <lecho.lib.hellocharts.view.PieChartView
+        android:id="@+id/pie_chart"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        />
+
+
+
+
+</LinearLayout>

@@ -1,0 +1,167 @@
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:orientation="vertical"
+
+    tools:context="com.brim.FotterFragmnet.Budget">
+
+
+
+        <LinearLayout
+            android:id="@+id/tav_view"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:background="@color/white"
+                android:weightSum="2"
+                >
+
+                <com.brim.Font.AxiformaMedium
+                    android:id="@+id/tab_spend"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="MY SPEND"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textColor="@color/textmediamGray"
+                    android:padding="12.5dp"
+                    app:textAllCaps="true" />
+                <com.brim.Font.AxiformaMedium
+                    android:id="@+id/tab_budget"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="MY BUDGET"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:padding="12.5dp"
+                    android:textColor="@color/textmediamGray"
+                    app:textAllCaps="true" />
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:orientation="horizontal"
+                android:weightSum="2"
+                >
+
+                <View
+                    android:id="@+id/v1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/lightOrange"
+                    />
+
+                <View
+                    android:id="@+id/v2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    />
+
+
+            </LinearLayout>
+
+
+        </LinearLayout>
+
+        <android.support.v4.widget.NestedScrollView
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            >
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="match_parent">
+
+                <LinearLayout
+                    android:id="@+id/send_view"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:layout_below="@+id/tav_view"
+                    android:orientation="vertical"
+                    >
+
+                    <android.support.v4.view.ViewPager
+                        android:id="@+id/graph_viewpager"
+                        android:layout_marginTop="20dp"
+                        android:layout_width="match_parent"
+                        android:layout_height="300dp">
+
+                    </android.support.v4.view.ViewPager>
+
+                    <RelativeLayout
+                        android:id="@+id/Page_indicator"
+                        android:orientation="horizontal"
+                        android:layout_width="match_parent"
+                        android:gravity="center"
+                        android:layout_height="60dp">
+
+                        <ImageView
+                            android:id="@+id/selector"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/tab_selector"
+                            />
+                        <ImageView
+                            android:id="@+id/selector2"
+                            android:layout_marginLeft="10dp"
+                            android:layout_toRightOf="@+id/selector"
+                            android:layout_width="10dp"
+                            android:layout_height="10dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/tab_selector"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <android.support.v7.widget.RecyclerView
+                        android:id="@+id/rv_spend"
+                        android:layout_width="match_parent"
+                        android:layout_height="wrap_content">
+
+                    </android.support.v7.widget.RecyclerView>
+
+                </LinearLayout>
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_my_budget"
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_below="@+id/tav_view"
+                    >
+
+
+                </android.support.v7.widget.RecyclerView>
+
+            </RelativeLayout>
+
+
+        </android.support.v4.widget.NestedScrollView>
+
+
+
+
+
+
+
+
+
+
+
+</LinearLayout>

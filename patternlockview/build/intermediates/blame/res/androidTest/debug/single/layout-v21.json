@@ -1,0 +1,18 @@
+[
+    {
+        "merged": "/home/su/Avik_workspace/Brim/patternlockview/build/intermediates/res/merged/androidTest/debug/layout-v21/notification_template_icon_group.xml",
+        "source": "/home/su/.android/build-cache/9d3bbb8ddb277b0bc68254ed5fa0a16f74959352/output/res/layout-v21/notification_template_icon_group.xml"
+    },
+    {
+        "merged": "/home/su/Avik_workspace/Brim/patternlockview/build/intermediates/res/merged/androidTest/debug/layout-v21/notification_template_custom_big.xml",
+        "source": "/home/su/.android/build-cache/9d3bbb8ddb277b0bc68254ed5fa0a16f74959352/output/res/layout-v21/notification_template_custom_big.xml"
+    },
+    {
+        "merged": "/home/su/Avik_workspace/Brim/patternlockview/build/intermediates/res/merged/androidTest/debug/layout-v21/notification_action.xml",
+        "source": "/home/su/.android/build-cache/9d3bbb8ddb277b0bc68254ed5fa0a16f74959352/output/res/layout-v21/notification_action.xml"
+    },
+    {
+        "merged": "/home/su/Avik_workspace/Brim/patternlockview/build/intermediates/res/merged/androidTest/debug/layout-v21/notification_action_tombstone.xml",
+        "source": "/home/su/.android/build-cache/9d3bbb8ddb277b0bc68254ed5fa0a16f74959352/output/res/layout-v21/notification_action_tombstone.xml"
+    }
+]

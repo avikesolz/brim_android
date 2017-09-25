@@ -1,0 +1,98 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:orientation="vertical"
+    android:layout_height="65dp">
+    <RelativeLayout
+        android:layout_marginTop="2dp"
+        android:background="#FFFFFF"
+        android:paddingTop="10dp"
+        android:paddingBottom="10dp"
+        android:paddingRight="20dp"
+        android:paddingLeft="20dp"
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+        <ImageView
+            android:id="@+id/IMG1"
+            android:layout_width="50dp"
+            android:src="@drawable/icon_food"
+            android:layout_height="50dp" />
+        <LinearLayout
+            android:layout_toRightOf="@+id/IMG1"
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:paddingLeft="10dp"
+            android:layout_height="match_parent">
+            <com.brim.Font.AxiformaBook
+                android:id="@+id/TXT_Name"
+                android:textSize="14sp"
+                android:textColor="#414042"
+                android:layout_width="wrap_content"
+                android:text="Shake Shack"
+                android:layout_height="wrap_content" />
+
+            <com.brim.Font.AxiformaRegular
+                android:id="@+id/TXT_Type"
+                android:paddingTop="2dp"
+                android:textSize="10sp"
+                android:textColor="#808080"
+                android:layout_width="wrap_content"
+                android:text="Food"
+                android:layout_height="wrap_content" />
+
+        </LinearLayout>
+
+
+
+        <RelativeLayout
+
+            android:layout_width="wrap_content"
+            android:orientation="vertical"
+            android:paddingRight="5dp"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            android:gravity="center_vertical"
+            android:layout_height="match_parent">
+            <ImageView
+                android:id="@+id/LL_R_1"
+                android:layout_marginTop="3dp"
+                android:layout_width="14dp"
+                android:layout_toLeftOf="@+id/TXT_PRICE1"
+                android:layout_marginRight="5dp"
+                android:src="@drawable/ic_fx_icon"
+                android:layout_height="14dp" />
+            <com.brim.Font.AxiformaBook
+                android:id="@+id/TXT_PRICE1"
+                android:textSize="14sp"
+                android:layout_alignParentRight="true"
+                android:textColor="#414042"
+                android:layout_width="wrap_content"
+                android:text="$16.21"
+                android:layout_height="wrap_content" />
+
+            <com.brim.Font.AxiformaRegular
+                android:id="@+id/TXT_Status"
+                android:layout_below="@+id/TXT_PRICE1"
+                android:paddingTop="2dp"
+                android:textSize="10sp"
+                android:layout_alignParentRight="true"
+                android:textColor="#808080"
+                android:layout_width="wrap_content"
+                android:text="Pending"
+                android:singleLine="true"
+                android:layout_height="wrap_content" />
+
+        </RelativeLayout>
+
+
+
+
+    </RelativeLayout>
+    <View
+        android:layout_width="match_parent"
+        android:background="#F1F1F1"
+        android:layout_height="2px"/>
+
+</LinearLayout>

@@ -1,0 +1,66 @@
+<?xml version="1.0" encoding="utf-8"?>
+<manifest xmlns:android="http://schemas.android.com/apk/res/android"
+    package="com.brim">
+
+    <uses-permission android:name="android.permission.INTERNET" />
+    <uses-permission android:name="android.permission.ACCESS_NETWORK_STATE" />
+    <uses-permission android:name="android.permission.USE_FINGERPRINT" />
+
+    <application
+        android:name=".AppContant.BrimApplication"
+        android:allowBackup="true"
+        android:icon="@mipmap/ic_launcher"
+        android:label="@string/app_name"
+        android:roundIcon="@mipmap/ic_launcher_round"
+        android:supportsRtl="true"
+        android:theme="@style/AppTheme">
+        <activity
+            android:name=".SplashActivity"
+            android:screenOrientation="portrait">
+            <intent-filter>
+                <action android:name="android.intent.action.MAIN" />
+
+                <category android:name="android.intent.category.LAUNCHER" />
+            </intent-filter>
+        </activity>
+        <activity
+            android:name=".LoginActivity"
+            android:screenOrientation="portrait" />
+        <activity
+            android:name=".BaseActivity"
+            android:label="@string/title_activity_base"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme"
+            android:windowSoftInputMode="adjustNothing" />
+        <activity
+            android:name=".OfferDetails"
+            android:screenOrientation="portrait"
+            android:theme="@style/AppTheme" />
+        <activity android:name=".TransactionDetails" />
+        <activity android:name=".MakePayment" />
+        <activity android:name=".SetUpInstallments" />
+        <activity android:name=".Installment" />
+        <activity android:name=".RedemptionOffer" />
+        <activity android:name=".Redeem" />
+        <activity android:name=".ChooseYourLoginWithOption" />
+        <activity android:name=".PatternLock" />
+        <activity android:name=".PatternLockFinalScreen" />
+        <activity android:name=".PasswordActivity" />
+        <activity android:name=".PinActivity" />
+        <activity android:name=".FinalPinActivity" />
+        <activity android:name=".FingerPrintActivity" />
+        <activity android:name=".FingerPrintFinalActivity" />
+
+        <meta-data
+            android:name="com.google.android.gms.version"
+            android:value="@integer/google_play_services_version" />
+
+        <!--              The API key for Google Maps-based APIs. -->
+        <meta-data
+            android:name="com.google.android.geo.API_KEY"
+            android:value="AIzaSyDIpRgYbfpKVe6GDw9-08Bki_9dxtpIjR8" />
+
+        <activity android:name=".ProfileDetails"></activity>
+    </application>
+
+</manifest>

@@ -1,0 +1,42 @@
+[
+    {
+        "merged": "/home/su/Avik_workspace/Brim/patternlockview/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_spinner.xml",
+        "source": "/home/su/.android/build-cache/9d3bbb8ddb277b0bc68254ed5fa0a16f74959352/output/res/color-v23/abc_tint_spinner.xml"
+    },
+    {
+        "merged": "/home/su/Avik_workspace/Brim/patternlockview/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_btn_checkable.xml",
+        "source": "/home/su/.android/build-cache/9d3bbb8ddb277b0bc68254ed5fa0a16f74959352/output/res/color-v23/abc_tint_btn_checkable.xml"
+    },
+    {
+        "merged": "/home/su/Avik_workspace/Brim/patternlockview/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_switch_thumb.xml",
+        "source": "/home/su/.android/build-cache/9d3bbb8ddb277b0bc68254ed5fa0a16f74959352/output/res/color-v23/abc_tint_switch_thumb.xml"
+    },
+    {
+        "merged": "/home/su/Avik_workspace/Brim/patternlockview/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_seek_thumb.xml",
+        "source": "/home/su/.android/build-cache/9d3bbb8ddb277b0bc68254ed5fa0a16f74959352/output/res/color-v23/abc_tint_seek_thumb.xml"
+    },
+    {
+        "merged": "/home/su/Avik_workspace/Brim/patternlockview/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_edittext.xml",
+        "source": "/home/su/.android/build-cache/9d3bbb8ddb277b0bc68254ed5fa0a16f74959352/output/res/color-v23/abc_tint_edittext.xml"
+    },
+    {
+        "merged": "/home/su/Avik_workspace/Brim/patternlockview/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_switch_track.xml",
+        "source": "/home/su/.android/build-cache/9d3bbb8ddb277b0bc68254ed5fa0a16f74959352/output/res/color-v23/abc_tint_switch_track.xml"
+    },
+    {
+        "merged": "/home/su/Avik_workspace/Brim/patternlockview/build/intermediates/res/merged/androidTest/debug/color-v23/abc_tint_default.xml",
+        "source": "/home/su/.android/build-cache/9d3bbb8ddb277b0bc68254ed5fa0a16f74959352/output/res/color-v23/abc_tint_default.xml"
+    },
+    {
+        "merged": "/home/su/Avik_workspace/Brim/patternlockview/build/intermediates/res/merged/androidTest/debug/color-v23/abc_btn_colored_text_material.xml",
+        "source": "/home/su/.android/build-cache/9d3bbb8ddb277b0bc68254ed5fa0a16f74959352/output/res/color-v23/abc_btn_colored_text_material.xml"
+    },
+    {
+        "merged": "/home/su/Avik_workspace/Brim/patternlockview/build/intermediates/res/merged/androidTest/debug/color-v23/abc_btn_colored_borderless_text_material.xml",
+        "source": "/home/su/.android/build-cache/9d3bbb8ddb277b0bc68254ed5fa0a16f74959352/output/res/color-v23/abc_btn_colored_borderless_text_material.xml"
+    },
+    {
+        "merged": "/home/su/Avik_workspace/Brim/patternlockview/build/intermediates/res/merged/androidTest/debug/color-v23/abc_color_highlight_material.xml",
+        "source": "/home/su/.android/build-cache/9d3bbb8ddb277b0bc68254ed5fa0a16f74959352/output/res/color-v23/abc_color_highlight_material.xml"
+    }
+]

@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="81dp"
+    android:background="@color/white"
+    android:orientation="vertical"
+
+    >
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:padding="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/check"
+            android:layout_width="20dp"
+            android:layout_height="20dp"
+            android:layout_centerVertical="true"
+            android:src="@drawable/oval"
+            />
+
+        <com.brim.Font.AxiformaMedium
+            android:id="@+id/txt_plan"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/check"
+            android:textColor="#000"
+            android:text="6 months"
+            android:textSize="12sp" />
+
+        <com.brim.Font.AxiformaMedium
+            android:id="@+id/txt_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="10dp"
+            android:layout_toRightOf="@+id/check"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/textlightGray"
+            android:text="Interent: 2.5%"
+            android:textSize="11sp" />
+
+
+        <com.brim.Font.AxiformaMedium
+            android:id="@+id/txt_amount"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:textColor="#000"
+            android:text="$1414 / months"
+            android:textSize="12sp" />
+
+        <com.brim.Font.AxiformaMedium
+            android:id="@+id/include_rate"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_alignParentRight="true"
+            android:layout_alignParentBottom="true"
+            android:textColor="@color/textlightGray"
+            android:text="Includes x% interest"
+            android:textSize="11sp" />
+
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_below="@id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:background="@color/BorderGray" />
+
+
+</LinearLayout>

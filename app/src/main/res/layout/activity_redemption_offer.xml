@@ -1,0 +1,213 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.brim.RedemptionOffer">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:padding="12dp"
+            android:src="@drawable/ic_icon_back"
+            />
+
+        <com.brim.Font.SFNFBoldTextView
+            android:id="@+id/header_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/back_button"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text=""
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="2dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/BorderGray"
+            />
+
+
+    </RelativeLayout>
+
+    <ScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_below="@+id/toolbar"
+        android:orientation="vertical">
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:orientation="vertical"
+            >
+
+        <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:background="#FFFFFF"
+        android:orientation="vertical">
+
+        <ImageView
+            android:id="@+id/image"
+            android:layout_width="match_parent"
+            android:layout_height="200dp"
+            android:scaleType="fitXY"
+            />
+
+        <com.brim.Font.AxiformaRegular
+            android:id="@+id/txt_name"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="15dp"
+            android:text=""
+            android:textColor="#414042"
+            android:textSize="17sp" />
+
+        <com.brim.Font.SFNFTextView
+            android:id="@+id/txt_mesg"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp"
+            android:text=""
+            android:textColor="#414042"
+            android:textSize="12sp" />
+
+        <LinearLayout
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:gravity="center_vertical"
+            android:orientation="horizontal"
+
+            android:paddingBottom="15dp"
+            android:paddingLeft="20dp"
+            android:paddingTop="10dp">
+
+            <ImageView
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:src="@drawable/ic_icon_time" />
+
+            <com.brim.Font.AxiformaBook
+                android:id="@+id/txt_lefttime"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:paddingLeft="10dp"
+                android:text=""
+                android:textAllCaps="true"
+                android:textColor="#4A4A4A"
+                android:textSize="13sp" />
+        </LinearLayout>
+    </LinearLayout>
+
+        <LinearLayout
+            android:id="@+id/filter_block"
+            android:layout_width="match_parent"
+            android:layout_height="40dp"
+            android:layout_marginTop="20dp"
+            android:orientation="horizontal"
+            android:weightSum="2"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:background="@color/white"
+            >
+
+            <com.brim.Font.AxiformaRegular
+                android:id="@+id/txt_transaction_header"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:textSize="11sp"
+                android:gravity="left|center_vertical"
+                android:text="Last"
+                android:textColor="@color/textDarkGray"
+                />
+
+            <RelativeLayout
+                android:id="@+id/button_days"
+                android:layout_width="0dp"
+                android:layout_height="match_parent"
+                android:layout_weight="1"
+                android:gravity="center_vertical"
+                >
+
+
+                <Spinner
+                    android:id="@+id/spinner_days"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:spinnerMode="dropdown"
+                    android:layout_alignParentRight="true"
+                    android:background="@color/white"
+                    android:layout_marginRight="20dp"
+                    android:layout_centerVertical="true"
+                    android:overlapAnchor="false"
+
+                    >
+
+                </Spinner>
+
+                <ImageView
+                    android:layout_width="20dp"
+                    android:layout_height="20dp"
+                    android:padding="5dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:src="@drawable/down_grey"
+                    />
+
+                <com.brim.Font.AxiformaRegular
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:textSize="11sp"
+                    android:gravity="left|center_vertical"
+                    android:text="Last"
+                    android:layout_toLeftOf="@+id/spinner_days"
+                    android:textColor="@color/textDarkGray"
+                    />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:background="@color/BorderGray"
+            />
+
+
+            <android.support.v7.widget.RecyclerView
+                android:id="@+id/rv_redemption"
+                android:layout_width="match_parent"
+                android:layout_height="300dp">
+
+
+            </android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+
+    </ScrollView>
+
+
+</LinearLayout>

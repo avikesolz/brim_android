@@ -1,0 +1,77 @@
+<?xml version="1.0" encoding="utf-8"?>
+<android.support.v7.widget.CardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    android:layout_width="300dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:orientation="vertical"
+    app:cardCornerRadius="3dp"
+    app:cardElevation="2dp">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="300dp"
+        android:orientation="vertical"
+        android:weightSum="2">
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1.2">
+
+            <ImageView
+                android:id="@+id/image"
+                android:layout_centerHorizontal="true"
+                android:layout_width="140dp"
+                android:layout_height="140dp"
+                android:scaleType="fitXY"
+                android:src="@drawable/promo_image2" />
+
+            <ImageView
+                android:id="@+id/button_cross"
+                android:layout_width="30dp"
+                android:layout_height="30dp"
+                android:layout_alignParentRight="true"
+                android:layout_marginRight="10dp"
+                android:layout_marginTop="10dp"
+                android:padding="4dp"
+                android:src="@drawable/ic_icon_dismiss" />
+
+
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight=".8"
+            android:orientation="vertical"
+            android:padding="15dp">
+
+            <com.brim.Font.SFNFTextView
+                android:id="@+id/TXT_Marchent"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="ZARA Canada"
+                android:layout_centerHorizontal="true"
+                android:textColor="#414042"
+                android:textSize="15sp" />
+
+            <com.brim.Font.SFNFTextView
+                android:id="@+id/txt_details"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/TXT_Marchent"
+                android:layout_marginTop="15dp"
+                android:paddingTop="3dp"
+                android:textSize="13sp"
+                android:text="Earn 3x pts when you shop at Zara using this card."
+                android:textColor="#414042" />
+
+
+        </RelativeLayout>
+
+    </LinearLayout>
+
+
+</android.support.v7.widget.CardView>

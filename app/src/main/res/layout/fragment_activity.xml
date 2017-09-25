@@ -1,0 +1,412 @@
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    tools:context="com.brim.FotterFragmnet.Activity">
+
+    <!-- TODO: Update blank fragment layout -->
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        >
+
+        <RelativeLayout
+            android:id="@+id/current_bal_block"
+            android:background="#FFFFFF"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:padding="20dp">
+
+
+
+            <com.brim.Font.AxiformaBook
+                android:id="@+id/txt_crnt_bal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text="Current Balance"
+                android:textSize="11sp"
+                android:textColor="#979797"
+                app:textAllCaps="true" />
+
+            <com.brim.Font.AxiformaMedium
+                android:id="@+id/TXT_Balance"
+                android:layout_below="@+id/txt_crnt_bal"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:text=""
+                android:textColor="#414042"
+                android:textSize="22sp" />
+
+            <android.support.v7.widget.CardView
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignParentRight="true"
+                android:layout_margin="4dp"
+                app:cardBackgroundColor="#00C6D8"
+                app:cardCornerRadius="3dp"
+                app:cardElevation="2dp">
+
+                <LinearLayout
+                    android:id="@+id/button_payment"
+                    android:layout_width="wrap_content"
+                    android:layout_height="match_parent"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    android:padding="10dp">
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:src="@drawable/ic_icon_pay" />
+
+                    <com.brim.Font.AxiformaMedium
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:paddingLeft="10dp"
+                        android:text="Make Payment"
+                        android:textColor="#FFFFFF"
+                        android:textSize="13sp" />
+
+                </LinearLayout>
+            </android.support.v7.widget.CardView>
+        </RelativeLayout>
+
+        <LinearLayout
+            android:id="@+id/tab_block"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@+id/current_bal_block"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:orientation="vertical"
+            android:background="@color/white"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="wrap_content"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                >
+
+                <com.brim.Font.AxiformaBook
+                    android:id="@+id/tab_trans"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="TRANSACTIONS"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:textColor="@color/textmediamGray"
+                    android:paddingBottom="10dp"
+                    app:textAllCaps="true" />
+                <com.brim.Font.AxiformaBook
+                    android:id="@+id/tab_install"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="INSTALLMENTS"
+                    android:textSize="12sp"
+                    android:gravity="center"
+                    android:layout_weight="1"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/textmediamGray"
+                    app:textAllCaps="true" />
+                <com.brim.Font.AxiformaBook
+                    android:id="@+id/tab_state"
+                    android:layout_width="0dp"
+                    android:layout_height="wrap_content"
+                    android:text="STATEMENTS"
+                    android:textSize="12sp"
+                    android:layout_weight="1"
+                    android:gravity="center"
+                    android:paddingBottom="10dp"
+                    android:textColor="@color/textmediamGray"
+                    app:textAllCaps="true" />
+
+
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:orientation="horizontal"
+                android:weightSum="3"
+                >
+
+                <View
+                    android:id="@+id/v1"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    />
+
+                <View
+                    android:id="@+id/v2"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    />
+                <View
+                    android:id="@+id/v3"
+                    android:layout_width="0dp"
+                    android:layout_height="match_parent"
+                    android:layout_weight="1"
+                    android:background="@color/white"
+                    />
+
+
+            </LinearLayout>
+
+
+
+        </LinearLayout>
+
+        <RelativeLayout
+            android:layout_below="@+id/tab_block"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent">
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="2.5dp"
+                android:background="@color/BorderGray"
+                />
+
+            <LinearLayout
+                android:id="@+id/view_1"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+
+                <RelativeLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="80dp"
+                    android:paddingTop="20dp"
+                    android:paddingBottom="20dp"
+                    android:paddingRight="20dp"
+                    android:paddingLeft="20dp"
+                    >
+
+                    <android.support.v7.widget.CardView
+                        android:id="@+id/search_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:layout_alignParentRight="true"
+                        app:cardBackgroundColor="@color/white"
+                        app:cardCornerRadius="3dp"
+                        app:cardElevation="2dp"
+                        >
+
+                        <LinearLayout
+                            android:layout_width="match_parent"
+                            android:layout_height="match_parent"
+                            android:gravity="center_vertical"
+                            android:orientation="horizontal"
+                         >
+
+                            <ImageView
+                                android:id="@+id/button_search"
+                                android:layout_width="30dp"
+                                android:layout_height="30dp"
+                                android:padding="5dp"
+                                android:layout_marginLeft="10dp"
+                                android:src="@drawable/search_icon" />
+
+                            <com.brim.Font.AxiformaBookEditText
+                                android:id="@+id/et_search"
+                                android:layout_width="match_parent"
+                                android:layout_height="match_parent"
+                                android:paddingLeft="10dp"
+                                android:hint="Make Payment"
+                                android:singleLine="true"
+                                android:background="@android:color/transparent"
+                                android:imeOptions="actionSearch"
+                                android:textSize="11sp" />
+
+                        </LinearLayout>
+                    </android.support.v7.widget.CardView>
+
+                    <LinearLayout
+                        android:id="@+id/installments_view"
+                        android:layout_width="match_parent"
+                        android:layout_height="match_parent"
+                        android:weightSum="2"
+                        android:orientation="horizontal"
+                        >
+
+                        <com.brim.Font.SFNFTextView
+                            android:id="@+id/button_cinstall"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Current Installments"
+                            android:textColor="#fff"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:background="@drawable/mold_rectangle_blue_left"
+                            />
+
+                        <com.brim.Font.SFNFTextView
+                            android:id="@+id/button_einstall"
+                            android:layout_width="0dp"
+                            android:layout_height="match_parent"
+                            android:layout_weight="1"
+                            android:text="Eligible Installments"
+                            android:textColor="@color/colorPrimaryDark"
+                            android:textSize="14sp"
+                            android:gravity="center"
+                            android:background="@drawable/mold_rectangle_bule_white_right"
+                            />
+
+
+                    </LinearLayout>
+
+
+
+                </RelativeLayout>
+
+                <LinearLayout
+                    android:id="@+id/filter_block"
+                    android:layout_width="match_parent"
+                    android:layout_height="40dp"
+                    android:orientation="horizontal"
+                    android:weightSum="2"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:background="@color/white"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/button_type"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        >
+
+                        <Spinner
+                            android:id="@+id/spinner_types"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:spinnerMode="dropdown"
+                            android:background="@color/white"
+                            android:layout_marginRight="20dp"
+                            android:layout_centerVertical="true"
+                            android:overlapAnchor="false"
+
+                            >
+
+                        </Spinner>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:padding="5dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/down_grey"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:id="@+id/button_days"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center_vertical"
+                        >
+
+
+                        <Spinner
+                            android:id="@+id/spinner_days"
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:spinnerMode="dropdown"
+                            android:layout_alignParentRight="true"
+                            android:background="@color/white"
+                            android:layout_marginRight="20dp"
+                            android:layout_centerVertical="true"
+                            android:overlapAnchor="false"
+
+                            >
+
+                        </Spinner>
+
+                        <ImageView
+                            android:layout_width="20dp"
+                            android:layout_height="20dp"
+                            android:padding="5dp"
+                            android:layout_centerVertical="true"
+                            android:layout_alignParentRight="true"
+                            android:src="@drawable/down_grey"
+                            />
+
+                        <com.brim.Font.AxiformaRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="match_parent"
+                            android:textSize="11sp"
+                            android:gravity="left|center_vertical"
+                            android:text="Last"
+                            android:layout_toLeftOf="@+id/spinner_days"
+                            android:textColor="@color/textDarkGray"
+                            />
+
+
+                    </RelativeLayout>
+
+
+                </LinearLayout>
+                <View
+                    android:layout_width="match_parent"
+                    android:layout_height="1dp"
+                    android:background="@color/BorderGray"
+                    />
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_transaction"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:paddingTop="10dp"
+                    android:background="@color/white"
+
+                    >
+
+
+                </android.support.v7.widget.RecyclerView>
+
+
+            </LinearLayout>
+
+            <LinearLayout
+                android:id="@+id/view_2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:gravity="center"
+                >
+
+                <android.support.v7.widget.RecyclerView
+                    android:id="@+id/rv_statement"
+                    android:layout_marginTop="20dp"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+
+                    ></android.support.v7.widget.RecyclerView>
+            </LinearLayout>
+
+
+        </RelativeLayout>
+
+
+    </RelativeLayout>
+
+
+</FrameLayout>

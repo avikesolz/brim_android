@@ -1,0 +1,553 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.brim.MakePayment">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:background="#fff"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:padding="12dp"
+            android:src="@drawable/ic_icon_back"
+            />
+
+        <com.brim.Font.SFNFBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/back_button"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="Make Payment"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:id="@+id/border"
+        android:layout_below="@id/top_bar"
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:background="@color/BorderGray" />
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:orientation="vertical"
+            android:weightSum="10"
+            >
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="3"
+                android:weightSum="2"
+                android:background="#fff"
+                android:orientation="vertical"
+                >
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:weightSum="2"
+                    android:gravity="center_vertical"
+                    android:orientation="horizontal"
+                    >
+
+                    <com.brim.Font.SFNFTextView
+                        android:id="@+id/button_debit"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="Pay with Interac Debit"
+                        android:textColor="#fff"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:background="@drawable/mold_rectangle_blue_left"
+                        />
+
+                    <com.brim.Font.SFNFTextView
+                        android:id="@+id/button_points"
+                        android:layout_width="0dp"
+                        android:layout_height="40dp"
+                        android:layout_weight="1"
+                        android:text="Pay with Points"
+                        android:textColor="@color/colorPrimaryDark"
+                        android:textSize="14sp"
+                        android:gravity="center"
+                        android:background="@drawable/mold_rectangle_bule_white_right"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="0dp"
+                    android:layout_weight="1"
+                    android:orientation="vertical"
+                    android:weightSum="2"
+                    >
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingRight="20dp"
+                        android:paddingLeft="20dp"
+                        >
+                        <com.brim.Font.AxiformaRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:textColor="#979797"
+                            android:textSize="11sp"
+                            android:text="AVAILABLE CREDIT" />
+
+                        <com.brim.Font.AxiformaRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:layout_centerVertical="true"
+                            android:textColor="#979797"
+                            android:textSize="11sp"
+                            android:text="DATE" />
+
+
+                    </RelativeLayout>
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1"
+                        android:paddingRight="20dp"
+                        android:paddingLeft="20dp"
+                        >
+                        <com.brim.Font.AxiformaBook
+                            android:id="@+id/txt_avai_credit"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textDarkGray"
+                            android:textSize="15sp"
+                            android:text="" />
+
+                        <com.brim.Font.AxiformaBook
+                            android:id="@+id/txt_date"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@color/textDarkGray"
+                            android:textSize="15sp"
+                            android:text="" />
+
+
+                    </RelativeLayout>
+
+                </LinearLayout>
+
+            </LinearLayout>
+
+            <View
+                android:id="@+id/border2"
+                android:layout_below="@id/top_bar"
+                android:layout_width="match_parent"
+                android:layout_height="2dp"
+                android:background="@color/BorderGray" />
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="5"
+                >
+                <LinearLayout
+                    android:id="@+id/view_1"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="5"
+                    android:visibility="visible"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/cust_amt_tab1"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.25"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        >
+
+                        <com.brim.Font.AxiformaBook
+                            android:id="@+id/txt_$"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textDarkGray"
+                            android:textSize="18sp"
+                            android:text="$" />
+
+                        <com.brim.Font.AxiformaBookEditText
+                            android:id="@+id/et_cust_amount"
+                            android:layout_toRightOf="@+id/txt_$"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/textmediamGray"
+                            android:textSize="18sp"
+                            android:inputType="number"
+                            android:background="@android:color/transparent"
+                            android:hint="0.00"
+                            />
+
+                        <com.brim.Font.AxiformaRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_below="@+id/txt_$"
+                            android:textColor="#979797"
+                            android:textSize="11sp"
+                            android:text="Custom Amount" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/border3"
+                        android:layout_below="@id/top_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/BorderGray" />
+
+                    <RelativeLayout
+                        android:id="@+id/crnt_amt_tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.25"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        >
+
+                        <com.brim.Font.AxiformaBook
+                            android:id="@+id/txt_$2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textDarkGray"
+                            android:textSize="18sp"
+                            android:text="$" />
+
+                        <com.brim.Font.AxiformaBook
+                            android:id="@+id/txt_min_amount"
+                            android:layout_toRightOf="@+id/txt_$2"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/textDarkGray"
+                            android:textSize="18sp"
+                            android:text="0.00"
+                            />
+
+                        <com.brim.Font.AxiformaRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_below="@+id/txt_$2"
+                            android:textColor="@color/textlightGray"
+                            android:textSize="11sp"
+                            android:text="Minimum Payment" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/border4"
+                        android:layout_below="@id/top_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/BorderGray" />
+
+                    <RelativeLayout
+                        android:id="@+id/state_bal_tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.25"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        >
+
+                        <com.brim.Font.AxiformaBook
+                            android:id="@+id/txt_$3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textDarkGray"
+                            android:textSize="18sp"
+                            android:text="$" />
+
+                        <com.brim.Font.AxiformaBook
+                            android:id="@+id/txt_state_bal"
+                            android:layout_toRightOf="@+id/txt_$3"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/textDarkGray"
+                            android:textSize="18sp"
+                            android:text="0.00"
+                            />
+
+                        <com.brim.Font.AxiformaRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_below="@+id/txt_$3"
+                            android:textColor="@color/textlightGray"
+                            android:textSize="11sp"
+                            android:text="Statement Balance" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/border5"
+                        android:layout_below="@id/top_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/BorderGray" />
+
+                    <RelativeLayout
+                        android:id="@+id/curnt_bal_tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.25"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        >
+
+                        <com.brim.Font.AxiformaBook
+                            android:id="@+id/txt_$4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textDarkGray"
+                            android:textSize="18sp"
+                            android:text="$" />
+
+                        <com.brim.Font.AxiformaBook
+                            android:id="@+id/txt_curnt_bal"
+                            android:layout_toRightOf="@+id/txt_$4"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/textDarkGray"
+                            android:textSize="18sp"
+                            android:text="0.00"
+                            />
+
+                        <com.brim.Font.AxiformaRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_below="@+id/txt_$4"
+                            android:textColor="@color/textlightGray"
+                            android:textSize="11sp"
+                            android:text="Current Balance" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/border6"
+                        android:layout_below="@id/top_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/BorderGray" />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:id="@+id/view_2"
+                    android:layout_width="match_parent"
+                    android:layout_height="match_parent"
+                    android:orientation="vertical"
+                    android:weightSum="5"
+                    android:visibility="gone"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/cust_amt_tab2"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.25"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        >
+
+                        <com.brim.Font.AxiformaBook
+                            android:id="@+id/txt_$5"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textDarkGray"
+                            android:textSize="18sp"
+                            android:text="$" />
+
+                        <com.brim.Font.AxiformaBookEditText
+                            android:id="@+id/et_cust_amount2"
+                            android:layout_toRightOf="@+id/txt_$5"
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/textmediamGray"
+                            android:textSize="18sp"
+                            android:inputType="number"
+                            android:background="@android:color/transparent"
+                            android:hint="0.00"
+                            />
+
+                        <com.brim.Font.AxiformaRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_below="@+id/txt_$5"
+                            android:textColor="#979797"
+                            android:textSize="11sp"
+                            android:text="Custom Amount" />
+
+                        <com.brim.Font.AxiformaRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_below="@+id/txt_$5"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@color/textDarkGray"
+                            android:textSize="14sp"
+                            android:text="0 pts"
+                            android:visibility="gone"
+                            />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/border7"
+                        android:layout_below="@id/top_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/BorderGray" />
+
+                    <RelativeLayout
+                        android:id="@+id/max_amount_tab"
+                        android:layout_width="match_parent"
+                        android:layout_height="0dp"
+                        android:layout_weight="1.25"
+                        android:paddingLeft="20dp"
+                        android:paddingRight="20dp"
+                        android:paddingTop="10dp"
+                        >
+
+                        <com.brim.Font.AxiformaBook
+                            android:id="@+id/txt_$6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:textColor="@color/textDarkGray"
+                            android:textSize="18sp"
+                            android:text="$" />
+
+                        <com.brim.Font.AxiformaBook
+                            android:id="@+id/txt_max_amount"
+                            android:layout_toRightOf="@+id/txt_$6"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_marginLeft="5dp"
+                            android:textColor="@color/textDarkGray"
+                            android:textSize="18sp"
+                            android:text="0.00"
+                            />
+
+                        <com.brim.Font.AxiformaRegular
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_below="@+id/txt_$6"
+                            android:textColor="@color/textlightGray"
+                            android:textSize="11sp"
+                            android:text="Max Amount" />
+
+                        <com.brim.Font.AxiformaRegular
+                            android:id="@+id/txt_cust_point"
+                            android:layout_width="wrap_content"
+                            android:layout_height="wrap_content"
+                            android:layout_centerVertical="true"
+                            android:layout_below="@+id/txt_$6"
+                            android:layout_alignParentRight="true"
+                            android:textColor="@color/textDarkGray"
+                            android:textSize="14sp"
+                            android:text="0 pts" />
+
+
+                    </RelativeLayout>
+
+                    <View
+                        android:id="@+id/border8"
+                        android:layout_below="@id/top_bar"
+                        android:layout_width="match_parent"
+                        android:layout_height="2dp"
+                        android:background="@color/BorderGray" />
+
+
+                </LinearLayout>
+
+
+            </RelativeLayout>
+
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:layout_height="0dp"
+                android:layout_weight="2"
+                >
+
+
+                <com.brim.Font.AxiformaBook
+                    android:id="@+id/button_continue"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:textColor="@color/white"
+                    android:textSize="16sp"
+                    android:layout_alignParentBottom="true"
+                    android:background="@color/lightBlue"
+                    android:gravity="center"
+                    android:text="Continue"
+                    />
+
+
+            </RelativeLayout>
+
+
+        </LinearLayout>
+
+
+
+    </LinearLayout>
+
+
+</RelativeLayout>

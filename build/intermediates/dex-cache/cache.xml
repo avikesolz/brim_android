@@ -1,0 +1,95 @@
+<?xml version="1.0" encoding="utf-8"?>
+<items version="2" >
+
+    <item
+        is-multidex="false"
+        jar="/home/su/.gradle/caches/modules-2/files-2.1/de.javakaffee/kryo-serializers/0.40/562cb61898302da4e8d3fd141c821edb1bc6b36d/kryo-serializers-0.40.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="562cb61898302da4e8d3fd141c821edb1bc6b36d">
+        <dex dex="/home/su/Avik_workspace/Brim/app/build/intermediates/pre-dexed/debug/kryo-serializers-0.40_f403075cc70226aee69c0f71568d3406222db128.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/su/.gradle/caches/modules-2/files-2.1/org.objenesis/objenesis/2.2/3fb533efdaa50a768c394aa4624144cf8df17845/objenesis-2.2.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="3fb533efdaa50a768c394aa4624144cf8df17845">
+        <dex dex="/home/su/Avik_workspace/Brim/app/build/intermediates/pre-dexed/debug/objenesis-2.2_180239213a507678e9d10aa8e69cb14bdb684d4d.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/su/.gradle/caches/modules-2/files-2.1/com.esotericsoftware/kryo/4.0.0/9f5c64c1315ec79bee0f56bb88e4ae94b65048ce/kryo-4.0.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="9f5c64c1315ec79bee0f56bb88e4ae94b65048ce">
+        <dex dex="/home/su/Avik_workspace/Brim/app/build/intermediates/pre-dexed/debug/kryo-4.0.0_97322a70cc6ac44f300b5285f918764c225abac5.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/su/.gradle/caches/modules-2/files-2.1/com.esotericsoftware/minlog/1.3.0/ff07b5f1b01d2f92bb00a337f9a94873712f0827/minlog-1.3.0.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="ff07b5f1b01d2f92bb00a337f9a94873712f0827">
+        <dex dex="/home/su/Avik_workspace/Brim/app/build/intermediates/pre-dexed/debug/minlog-1.3.0_493b5106c16adedcc6ecb830b41009beacb9f288.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/su/.android/build-cache/803f9495b8f3d71859793826074e08024982d354/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="d594befb390f7c12b9b460f7c64805a635f2ced9">
+        <dex dex="/home/su/Avik_workspace/Brim/app/build/intermediates/pre-dexed/debug/classes_298420650fefb3335111c7259a07593f1a8e6771.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/su/Avik_workspace/Brim/app/libs/hellocharts-library-1.5.8.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="700944cb3a8ce4fe543cfac1a9146a11cbf702dc">
+        <dex dex="/home/su/Avik_workspace/Brim/app/build/intermediates/pre-dexed/debug/hellocharts-library-1.5.8_78fb8339b86d5d64f31a3ace9e2413f59e89be38.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/su/.android/build-cache/eb3e33d0c26df86738ce5fbc1340cb901d0362e1/output/jars/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="addfa78915fbe6bc0a209aeb097c1e212b8c2728">
+        <dex dex="/home/su/Avik_workspace/Brim/app/build/intermediates/pre-dexed/debug/classes_49e617d1bce6d18ff23bbc6caf5297bace7aa541.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/opt/android-studio/gradle/m2repository/org/ow2/asm/asm/5.0.4/asm-5.0.4.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="0da08b8cce7bbf903602a25a3a163ae252435795">
+        <dex dex="/home/su/Avik_workspace/Brim/app/build/intermediates/pre-dexed/debug/asm-5.0.4_3a1e4cf762399ef08a74488e1f8091fbcd009d4c.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/su/Avik_workspace/Brim/patternlockview/build/intermediates/bundles/default/classes.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="e91f12d984d7184ec5e48cd2e7eb411a422162d5">
+        <dex dex="/home/su/Avik_workspace/Brim/app/build/intermediates/pre-dexed/debug/classes_bbff8f769b29f67542c31ab1633755f0719c6e9f.jar" />
+    </item>
+    <item
+        is-multidex="false"
+        jar="/home/su/.gradle/caches/modules-2/files-2.1/com.esotericsoftware/reflectasm/1.11.3/8b102eed2f12412b254946811111ea48bc03a266/reflectasm-1.11.3.jar"
+        jumboMode="false"
+        optimize="true"
+        revision="26.0.1"
+        sha1="8b102eed2f12412b254946811111ea48bc03a266">
+        <dex dex="/home/su/Avik_workspace/Brim/app/build/intermediates/pre-dexed/debug/reflectasm-1.11.3_77b43ddba4f586d85d7427c70b1e848b80c93a54.jar" />
+    </item>
+
+</items>

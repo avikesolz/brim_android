@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.brim.PinActivity">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_above="@+id/ll_submit"
+        android:gravity="center"
+        android:orientation="vertical">
+
+
+        <com.brim.Font.AxiformaRegular
+            android:id="@+id/tv_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="CONFIRM PIN"
+            android:textColor="@color/textDarkGray"
+            android:textSize="15sp" />
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_marginLeft="40dp"
+            android:layout_marginRight="40dp"
+            android:layout_marginTop="30dp">
+
+
+            <com.andrognito.pinlockview.IndicatorDots
+                android:id="@+id/indicator_dots_final"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="10dp"
+                app:dotDiameter="60dp"
+                app:dotEmptyBackground="@drawable/round_white"
+                app:dotFilledBackground="@drawable/white_astrics"
+                app:dotSpacing="5dp"
+                app:pinLength="4" />
+
+            <com.andrognito.pinlockview.PinLockView
+                android:id="@+id/pin_lock_view_final"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/indicator_dots_final"
+                android:layout_centerHorizontal="true"
+                android:layout_gravity="center"
+                android:layout_marginTop="30dp"
+                app:keypadButtonSize="50dp"
+                app:keypadShowDeleteButton="true"
+                app:keypadTextColor="@color/textDarkGray"
+                app:keypadTextSize="30dp" />
+
+
+        </RelativeLayout>
+
+
+    </LinearLayout>
+
+    <LinearLayout
+        android:id="@+id/ll_submit_pin_final"
+        android:layout_width="match_parent"
+        android:layout_height="50dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:gravity="center">
+
+        <com.brim.Font.AxiformaRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:text="Submit"
+            android:textColor="#ffffff"
+            android:textSize="18sp" />
+
+    </LinearLayout>
+
+</RelativeLayout>

@@ -1,0 +1,162 @@
+<android.support.v4.widget.NestedScrollView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+
+   >
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_height="match_parent">
+
+
+            <android.support.v4.view.ViewPager
+                android:id="@+id/card_viewpager"
+                android:layout_marginTop="20dp"
+                android:layout_width="match_parent"
+                android:layout_height="310dp">
+
+            </android.support.v4.view.ViewPager>
+
+
+
+        <RelativeLayout
+            android:id="@+id/Page_indicator"
+            android:orientation="horizontal"
+            android:layout_width="match_parent"
+            android:gravity="center"
+            android:layout_height="40dp">
+
+            <ImageView
+                android:id="@+id/selector"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/tab_selector"
+                />
+            <ImageView
+                android:id="@+id/selector2"
+                android:layout_marginLeft="10dp"
+                android:layout_toRightOf="@+id/selector"
+                android:layout_width="10dp"
+                android:layout_height="10dp"
+                android:layout_centerVertical="true"
+                android:src="@drawable/tab_selector"
+                />
+
+
+        </RelativeLayout>
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="#FFFFFF"
+                android:layout_height="40dp">
+
+                <com.brim.Font.AxiformaRegular
+                    android:layout_width="wrap_content"
+                    android:text="Offers &amp; Insights"
+                    android:textAllCaps="true"
+                    android:paddingLeft="10dp"
+                    android:textColor="#979797"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content" />
+
+
+                <ImageView
+                    android:id="@+id/IMG_Right"
+
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_icon_caret_grey"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content" />
+                <com.brim.Font.AxiformaRegular
+                    android:text="View"
+                    android:paddingRight="5dp"
+                    android:layout_centerVertical="true"
+                    android:textAllCaps="true"
+                    android:textColor="#979797"
+
+                    android:layout_toLeftOf="@+id/IMG_Right"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="2dp"
+                android:id="@+id/list_item"
+                android:layout_width="match_parent"
+                android:paddingTop="10dp"
+                android:paddingBottom="10dp"
+                android:background="#FFF"
+                android:layout_height="wrap_content"></android.support.v7.widget.RecyclerView>
+
+        </LinearLayout>
+
+
+        <LinearLayout
+            android:layout_marginTop="40dp"
+            android:layout_width="match_parent"
+            android:orientation="vertical"
+            android:layout_height="wrap_content">
+            <RelativeLayout
+                android:layout_width="match_parent"
+                android:background="#FFFFFF"
+                android:layout_height="40dp">
+
+                <com.brim.Font.SFNFTextView
+                    android:layout_width="wrap_content"
+                    android:text="Recent Transactions"
+                    android:textAllCaps="true"
+                    android:paddingLeft="10dp"
+                    android:layout_centerVertical="true"
+                    android:layout_height="wrap_content" />
+
+
+                <ImageView
+                    android:id="@+id/IMG_Right2"
+                    android:layout_width="wrap_content"
+                    android:src="@drawable/ic_icon_caret_grey"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    android:layout_marginRight="10dp"
+                    android:layout_height="wrap_content" />
+                <com.brim.Font.SFNFTextView
+                    android:text="View"
+                    android:paddingRight="5dp"
+                    android:layout_centerVertical="true"
+                    android:textAllCaps="true"
+                    android:layout_toLeftOf="@+id/IMG_Right2"
+                    android:layout_width="wrap_content"
+                    android:layout_height="wrap_content" />
+
+            </RelativeLayout>
+
+            <android.support.v7.widget.RecyclerView
+                android:layout_marginTop="2dp"
+                android:id="@+id/Rec_Recent_Transcation"
+                android:layout_width="match_parent"
+                android:layout_height="300dp"
+                android:background="#FFF"
+                android:orientation="vertical"
+              >
+
+            </android.support.v7.widget.RecyclerView>
+
+
+        </LinearLayout>
+
+
+    </LinearLayout>
+
+
+
+</android.support.v4.widget.NestedScrollView>
+
