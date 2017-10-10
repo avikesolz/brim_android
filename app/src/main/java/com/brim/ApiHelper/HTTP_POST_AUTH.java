@@ -78,8 +78,8 @@ public abstract class HTTP_POST_AUTH {
 
 
 
-                    Loger.MSG("GET @@", "" + localApi);
-                    Loger.MSG("GET @@", "" + responseString);
+                    Loger.MSG("POST_AUTH @@", "" + localApi);
+                    Loger.MSG("POST_AUTH @@", "" + responseString);
 
                 } catch (Exception e) {
                     e.printStackTrace();

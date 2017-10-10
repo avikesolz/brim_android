@@ -1,0 +1,84 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:background="@drawable/background"
+    tools:context="com.brim.RemoveAccount">
+
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:orientation="vertical"
+        android:layout_margin="15dp"
+        android:layout_centerInParent="true"
+        android:gravity="center_horizontal"
+        android:layout_height="wrap_content">
+
+        <ImageView
+            android:layout_width="wrap_content"
+            android:src="@drawable/ic_app_logo"
+            android:layout_height="wrap_content"
+            android:layout_marginBottom="50dp"
+            />
+
+
+
+        <com.brim.Font.AxiformaMedium
+            android:id="@+id/txt_name"
+            android:text="Welcome,"
+            android:gravity="center"
+            android:textSize="22sp"
+            android:textColor="@color/white"
+            android:layout_width="match_parent"
+            android:layout_height="match_parent" />
+
+
+
+
+
+        <android.support.v7.widget.CardView
+            android:layout_width="match_parent"
+            android:layout_marginLeft="5dp"
+            android:layout_marginRight="5dp"
+            android:layout_marginBottom="5dp"
+            android:layout_marginTop="25dp"
+            app:cardCornerRadius="3dp"
+            android:id="@+id/button_proceed"
+            android:onClick="onClick"
+            app:cardElevation="3dp"
+            app:cardBackgroundColor="#00C6D8"
+            android:layout_height="50dp">
+            <com.brim.Font.AxiformaRegular
+                android:text="Proceed"
+                android:gravity="center"
+                android:textColor="#FFFFFF"
+                android:textSize="14sp"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+        </android.support.v7.widget.CardView>
+
+
+        <LinearLayout
+            android:id="@+id/button_remove"
+            android:layout_width="wrap_content"
+            android:orientation="horizontal"
+            android:layout_marginTop="30dp"
+            android:layout_height="50dp">
+
+
+            <com.brim.Font.AxiformaMedium
+                android:text="Remove &amp; Use Another Account"
+                android:gravity="center"
+                android:textSize="12sp"
+                android:textColor="#01AFC2"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent" />
+
+        </LinearLayout>
+
+    </LinearLayout>
+
+
+</RelativeLayout>

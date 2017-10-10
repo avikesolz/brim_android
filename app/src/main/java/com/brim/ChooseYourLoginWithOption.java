@@ -11,7 +11,7 @@ import com.brim.AppContant.BrimApplication;
 
 public class ChooseYourLoginWithOption extends AppCompatActivity {
 
-    RelativeLayout Button_Pattern,Button_Password,Button_Pin;
+    RelativeLayout Button_Pattern,Button_Password,Button_Pin,Button_Touch;
     TextView txt_username;
 
     @Override
@@ -29,13 +29,29 @@ public class ChooseYourLoginWithOption extends AppCompatActivity {
 
         Button_Pin = (RelativeLayout) findViewById(R.id.rl_pin);
 
+        Button_Touch = (RelativeLayout) findViewById(R.id.rl_touch);
+
 
         Button_Pattern.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
 
-                startActivity(new Intent(ChooseYourLoginWithOption.this,PatternLock.class));
-                //finish();
+
+                Intent intent=new Intent(ChooseYourLoginWithOption.this, PatternLock.class);
+                if(getIntent().getExtras().getString("from").equals("login")){
+
+                    intent.putExtra("from","login");
+
+                }  else  if(getIntent().getExtras().getString("from").equals("account")) {
+
+                    intent.putExtra("from","newsetup");
+
+                }
+
+                startActivity(intent);
+
+                finish();
+
 
             }
         });
@@ -45,8 +61,20 @@ public class ChooseYourLoginWithOption extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                startActivity(new Intent(ChooseYourLoginWithOption.this,PasswordActivity.class));
-               // finish();
+
+                Intent intent=new Intent(ChooseYourLoginWithOption.this, PasswordActivity.class);
+                if(getIntent().getExtras().getString("from").equals("login")){
+
+                    intent.putExtra("from","login");
+
+                } else  if(getIntent().getExtras().getString("from").equals("account")) {
+
+                    intent.putExtra("from","newsetup");
+
+                }
+                startActivity(intent);
+
+                finish();
 
             }
         });
@@ -55,11 +83,49 @@ public class ChooseYourLoginWithOption extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                startActivity(new Intent(ChooseYourLoginWithOption.this,PinActivity.class));
-               // finish();
+                Intent intent=new Intent(ChooseYourLoginWithOption.this, PinActivity.class);
+                if(getIntent().getExtras().getString("from").equals("login")){
+
+                    intent.putExtra("from","login");
+
+                } else  if(getIntent().getExtras().getString("from").equals("account")) {
+
+                    intent.putExtra("from","newsetup");
+
+                }
+                startActivity(intent);
+
+                finish();
 
             }
         });
 
+        Button_Touch.setOnClickListener(new View.OnClickListener() {
+            @Override
+            public void onClick(View view) {
+
+                Intent intent=new Intent(ChooseYourLoginWithOption.this, FingerPrintActivity.class);
+                if(getIntent().getExtras().getString("from").equals("login")){
+
+                    intent.putExtra("from","login");
+
+                } else  if(getIntent().getExtras().getString("from").equals("account")) {
+
+                    intent.putExtra("from","newsetup");
+
+                }
+                startActivity(intent);
+
+                finish();
+
+            }
+        });
+
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+        finish();
     }
 }

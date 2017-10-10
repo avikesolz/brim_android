@@ -1,0 +1,392 @@
+<?xml version="1.0" encoding="utf-8"?>
+<RelativeLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    tools:context="com.brim.UpgradeLimit">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        >
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:padding="12dp"
+            android:src="@drawable/ic_icon_back"
+            />
+
+        <com.brim.Font.SFNFBoldTextView
+            android:id="@+id/txt_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/back_button"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="Add Authorized User"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/BorderGray"
+        />
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_marginBottom="60dp"
+        >
+
+        <LinearLayout
+            android:layout_width="match_parent"
+            android:layout_height="match_parent"
+            android:background="@color/white"
+            android:orientation="vertical"
+            >
+
+            <com.brim.Font.AxiformaRegular
+                android:layout_width="match_parent"
+                android:layout_height="40dp"
+                android:text="ADD INFORMATION"
+                android:gravity="center_vertical"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textSize="14sp"
+                android:textColor="@color/textlightGray"
+                />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/BorderGray"
+                />
+
+
+
+                <com.brim.Font.AxiformaBookEditText
+                    android:id="@+id/et_fname"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:hint="First Name"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/textDarkGray"
+                    android:singleLine="true"
+                    />
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/BorderGray"
+                />
+
+
+                <com.brim.Font.AxiformaBookEditText
+                    android:id="@+id/et_lname"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:hint="Last Name"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/textDarkGray"
+                    android:singleLine="true"
+
+                    />
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/BorderGray"
+                />
+
+
+                <com.brim.Font.AxiformaBookEditText
+                    android:id="@+id/et_email"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Email"
+                    android:inputType="textEmailAddress"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/textDarkGray"
+                    android:singleLine="true"
+
+                    />
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/BorderGray"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@color/white"
+                android:weightSum="2"
+                >
+
+                <com.brim.Font.AxiformaMedium
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="Date of Birth"
+                    android:gravity="center_vertical"
+                    android:textSize="14sp"
+                    android:textColor="@color/textlightGray"
+                    />
+
+                <com.brim.Font.AxiformaMedium
+                    android:id="@+id/txt_dob"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:hint="Select DOB"
+                    android:gravity="right|center_vertical"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/textDarkGray"
+                    android:singleLine="true"
+
+                    />
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/BorderGray"
+                />
+
+                <com.brim.Font.AxiformaBookEditText
+                    android:id="@+id/et_address"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Home Address"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/textDarkGray"
+                    android:singleLine="true"
+
+                    />
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/BorderGray"
+                />
+
+
+
+
+                <com.brim.Font.AxiformaBookEditText
+                    android:id="@+id/et_city"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="City"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/textDarkGray"
+                    android:singleLine="true"
+
+                    />
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/BorderGray"
+                />
+
+            <LinearLayout
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:orientation="horizontal"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:background="@color/white"
+                android:weightSum="2"
+                >
+
+                <com.brim.Font.AxiformaMedium
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    android:text="Province"
+                    android:gravity="center_vertical"
+                    android:textSize="14sp"
+                    android:textColor="@color/textlightGray"
+                    />
+
+                <RelativeLayout
+                    android:id="@+id/spinner_block"
+                    android:layout_width="0dp"
+                    android:layout_height="50dp"
+                    android:layout_weight="1"
+                    >
+
+
+
+                    <com.brim.Font.AxiformaRegular
+                        android:id="@+id/txt_province"
+                        android:layout_width="wrap_content"
+                        android:layout_height="match_parent"
+                        android:gravity="center_vertical"
+                        android:hint="Select Province"
+                        android:textSize="14sp"
+                        android:layout_alignParentRight="true"
+                        android:background="@color/white"
+                        android:layout_marginRight="30dp"
+                        android:layout_centerVertical="true"
+                        android:textColor="@color/textDarkGray"
+
+                        />
+
+
+                    <ImageView
+                        android:layout_width="20dp"
+                        android:layout_height="20dp"
+                        android:padding="5dp"
+                        android:layout_centerVertical="true"
+                        android:layout_alignParentRight="true"
+                        android:src="@drawable/down_grey"
+                        />
+
+
+                </RelativeLayout>
+
+
+
+            </LinearLayout>
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/BorderGray"
+                />
+
+
+
+                <com.brim.Font.AxiformaBookEditText
+                    android:id="@+id/et_code"
+                    android:layout_width="match_parent"
+                    android:layout_height="50dp"
+                    android:hint="Postal Code"
+                    android:paddingLeft="20dp"
+                    android:paddingRight="20dp"
+                    android:textSize="14sp"
+                    android:background="@android:color/transparent"
+                    android:textColor="@color/textDarkGray"
+                    android:singleLine="true"
+
+                    />
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/BorderGray"
+                />
+
+            <com.brim.Font.AxiformaBookEditText
+                android:id="@+id/et_credit_limit"
+                android:layout_width="match_parent"
+                android:layout_height="50dp"
+                android:hint="Credit Limit"
+                android:inputType="number"
+                android:paddingLeft="20dp"
+                android:paddingRight="20dp"
+                android:textSize="14sp"
+                android:background="@android:color/transparent"
+                android:textColor="@color/textDarkGray"
+                android:singleLine="true"
+
+                />
+
+
+
+            <View
+                android:layout_width="match_parent"
+                android:layout_height="1dp"
+                android:layout_alignParentBottom="true"
+                android:background="@color/BorderGray"
+                />
+
+
+
+
+        </LinearLayout>
+
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+    </LinearLayout>
+
+
+    <com.brim.Font.AxiformaMedium
+        android:id="@+id/button_submit"
+        android:layout_width="match_parent"
+        android:layout_height="60dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/colorPrimaryDark"
+        android:textColor="@color/white"
+        android:text="Submit"
+        android:textSize="15sp"
+        android:gravity="center"
+        />
+
+
+
+</RelativeLayout>

@@ -23,6 +23,13 @@ public class ApiConstant {
     public static final String ME_PROFILE="me/profile";
     public static final String STATEMENTS="/statements";
     public static final String REWARDS_HISTORY="rewards/history";
+    public static final String CHANGE_PASSWORD="me/password";
+    public static final String FAQ="faq";
+    public static final String SETTINGS="settings";
+    public static final String TRAVEL_NOTICES="travel_notices";
+    public static final String LEGAL_PRIVACY="http://abcanada.ca/legal-privacy.html";
+    public static final String FAMILY_CARDS="family_cards";
+    public static final String PROFILE="profile";
 
 
 }

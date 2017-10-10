@@ -54,6 +54,16 @@ public class BrimApplication extends Application{
         return authProfilePreference.getString(AppConstant.NAME,"");
     }
 
+    public void SetPrimaryCardType(String id)
+    {
+        authProfilePreference.edit().putString(AppConstant.CARDTYPE,id).commit();
+    }
+
+    public String GetPrimaryCardType()
+    {
+        return authProfilePreference.getString(AppConstant.CARDTYPE,"");
+    }
+
     public void SetCardId(String id)
     {
         authProfilePreference.edit().putString(AppConstant.CARDID,id).commit();
@@ -62,6 +72,16 @@ public class BrimApplication extends Application{
     public String GetCardId()
     {
         return authProfilePreference.getString(AppConstant.CARDID,"");
+    }
+
+    public void SetEmail(String id)
+    {
+        authProfilePreference.edit().putString(AppConstant.EMAIL,id).commit();
+    }
+
+    public String GetEmail()
+    {
+        return authProfilePreference.getString(AppConstant.EMAIL,"");
     }
 
     public void SetPass(String id)
@@ -82,6 +102,16 @@ public class BrimApplication extends Application{
     public String GetPin()
     {
         return authProfilePreference.getString(AppConstant.PIN,"");
+    }
+
+    public void SetPassType(String id)
+    {
+        authProfilePreference.edit().putString(AppConstant.PASSTYPE,id).commit();
+    }
+
+    public String GetPassType()
+    {
+        return authProfilePreference.getString(AppConstant.PASSTYPE,"");
     }
 
 

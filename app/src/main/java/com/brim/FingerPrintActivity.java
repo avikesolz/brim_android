@@ -21,10 +21,44 @@ public class FingerPrintActivity extends AppCompatActivity {
             @Override
             public void onClick(View view) {
 
-                startActivity(new Intent(FingerPrintActivity.this, FingerPrintFinalActivity.class));
+                Intent intent=new Intent(FingerPrintActivity.this, FingerPrintFinalActivity.class);
+
+                if(getIntent().getExtras().getString("from").equals("login")){
+
+                    intent.putExtra("from","login");
+
+                } else  if(getIntent().getExtras().getString("from").equals("account")) {
+
+                    intent.putExtra("from","newsetup");
+
+                }
+
+                startActivity(intent);
+                finish();
 
             }
         });
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intent=new Intent(FingerPrintActivity.this,ChooseYourLoginWithOption.class);
+
+        if(getIntent().getExtras().getString("from").equals("login")){
+
+            intent.putExtra("from","login");
+
+        } else  if(getIntent().getExtras().getString("from").equals("newsetup")) {
+
+            intent.putExtra("from","account");
+
+        }
+
+        startActivity(intent);
+
+        finish();
     }
 }

@@ -10,6 +10,7 @@ import android.support.v7.widget.CardView;
 import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.text.Html;
+import android.util.Log;
 import android.view.KeyEvent;
 import android.view.LayoutInflater;
 import android.view.MotionEvent;
@@ -257,10 +258,9 @@ public class Activity extends Fragment {
                 filter_block.setVisibility(View.GONE);
 
 
-                tans_filter="all";
-                date="60";
-                sear_text="";
-                install_filter="1";
+                tans_filter="";
+                date="";
+                install_filter="";
 
 
                 page_no=1;
@@ -290,9 +290,9 @@ public class Activity extends Fragment {
                 filter_block.setVisibility(View.GONE);
 
 
-                tans_filter="1";
-                date="60";
-                sear_text="";
+                tans_filter="";
+                date="";
+                install_filter="";
 
 
                 page_no=1;
@@ -323,8 +323,9 @@ public class Activity extends Fragment {
                 filter_block.setVisibility(View.VISIBLE);
 
 
-                tans_filter="all";
-                date="60";
+                tans_filter="";
+                date="";
+                install_filter="1";
                 sear_text="";
 
 
@@ -400,41 +401,35 @@ public class Activity extends Fragment {
                         recentAdapter=null;
 
                         tans_filter = "all";
-                        if(networkChecking.isConnectingToInternet()==true) {
-                            getTransactions();
-                        }else{
-                            Toast.makeText(getActivity(),getResources().getString(R.string.no_network),Toast.LENGTH_SHORT).show();
-                        }
+
                     } else if (i == 1) {
                         page_no = 1;
                         recentAdapter=null;
 
                         tans_filter = "pre-auth";
-                        if(networkChecking.isConnectingToInternet()==true) {
-                            getTransactions();
-                        }else{
-                            Toast.makeText(getActivity(),getResources().getString(R.string.no_network),Toast.LENGTH_SHORT).show();
-                        }
+
                     } else if (i == 2) {
                         page_no = 1;
                         recentAdapter=null;
 
                         tans_filter = "foreign";
-                        if(networkChecking.isConnectingToInternet()==true) {
-                            getTransactions();
-                        }else{
-                            Toast.makeText(getActivity(),getResources().getString(R.string.no_network),Toast.LENGTH_SHORT).show();
-                        }
+
                     } else if (i == 3) {
                         page_no = 1;
                         recentAdapter=null;
-
                         tans_filter = "payment";
-                        if(networkChecking.isConnectingToInternet()==true) {
+
+                    }
+
+                    if(networkChecking.isConnectingToInternet()==true) {
+                        if(tab_status.equals("TRANS")) {
                             getTransactions();
-                        }else{
-                            Toast.makeText(getActivity(),getResources().getString(R.string.no_network),Toast.LENGTH_SHORT).show();
                         }
+                        else if(tab_status.equals("TRANS")){
+
+                        }
+                    }else{
+                        Toast.makeText(getActivity(),getResources().getString(R.string.no_network),Toast.LENGTH_SHORT).show();
                     }
                 }
 
@@ -618,6 +613,8 @@ public class Activity extends Fragment {
 
                     resume_status=true;
 
+                    BrimApplication.getInstnace().SetPrimaryCardType(Object.getString("primary"));
+
                     if (Object.getBoolean("primary")){
                         tab_trans.setVisibility(View.VISIBLE);
                         tab_install.setVisibility(View.VISIBLE);
@@ -662,12 +659,14 @@ public class Activity extends Fragment {
         };
     }
 
+    //http://abcanada.ca/api/cards/5041160207877698/transactions?card_filter=&page_size=10&date_filter=&transaction_filter=&q=&page_number=1&installment_filter=1&sort=-transaction_date
+
     public void getTransactions() {
         appProgerssDialog.SetTitle(getString(R.string.app_name));
         appProgerssDialog.SetMessage("Please Wait...");
         appProgerssDialog.Show();
 
-        new HTTP_Get(ApiConstant.TRANSACTION+card_id+"/transactions?card_filter=primary&sort=-transaction_date"
+        new HTTP_Get(ApiConstant.TRANSACTION+card_id+"/transactions?card_filter=&sort=-transaction_date"
                 +"&installment_filter="+install_filter
                 +"&transaction_filter="+tans_filter+"&date_filter="+date+"&q="+Html.fromHtml((String) sear_text).toString()
                 +"&page_number="+page_no+"&page_size="+size) {
@@ -683,12 +682,24 @@ public class Activity extends Fragment {
 
                         if(transactions.length()>0){
 
+                            rv_Transcation.setVisibility(View.VISIBLE);
+
 
                             for (int i = 0; i < transactions.length(); i++) {
                                 TransactionListData datat = new TransactionListData();
                                 datat.setItemObject(transactions.getJSONObject(i));
-                                datat.setImage(AppConstant.IMAGE_URL + transactions.getJSONObject(i).getJSONObject("category").getString("id") + ".png");
 
+                                Object intervention = transactions.getJSONObject(i).get("category");
+                                if (intervention instanceof JSONArray) {
+                                    // It's an array
+                                    //JSONArray jsonArray = (JSONArray)intervention;
+                                }
+                                else if (intervention instanceof JSONObject) {
+                                    // It's an object
+                                    //JSONObject jsonObject = (JSONObject)intervention;
+                                    datat.setImage(AppConstant.IMAGE_URL + transactions.getJSONObject(i).getJSONObject("category").getString("id") + ".png");
+
+                                }
                                 //Log.d("Image url","::::"+AppConstant.IMAGE_URL+transactions.getJSONObject(i).getJSONObject("category").getString("id")+".png");
 
                                 RecentTransactionList.add(datat);
@@ -705,6 +716,11 @@ public class Activity extends Fragment {
                                 recentAdapter.notifyDataSetChanged();
 
                             }
+
+                        }else{
+
+                            if(page_no==1)
+                            rv_Transcation.setVisibility(View.INVISIBLE);
 
                         }
                     }
@@ -740,12 +756,16 @@ public class Activity extends Fragment {
 
     }
 
+
+
     public void getInstallments() {
         appProgerssDialog.SetTitle(getString(R.string.app_name));
         appProgerssDialog.SetMessage("Please Wait...");
         appProgerssDialog.Show();
 
-        new HTTP_Get(ApiConstant.TRANSACTION+card_id+ApiConstant.INSTALLMENTS+"&page_number="+page_no+"&page_size="+size) {
+        new HTTP_Get(ApiConstant.TRANSACTION+card_id+ApiConstant.INSTALLMENTS+"?"+"installment_filter="+install_filter
+                +"&transaction_filter="+tans_filter+"&date_filter="+date
+                +"&sort=-transaction_date&page_number="+page_no+"&page_size="+size) {
             @Override
             protected void OnSucess(String Response) {
                 RecentTransactionList=new LinkedList<>();
@@ -756,7 +776,11 @@ public class Activity extends Fragment {
 
                     if (installments!=null) {
 
+
                         if(installments.length()>0){
+
+                            rv_Transcation.setVisibility(View.VISIBLE);
+
 
 
                             for (int i = 0; i < installments.length(); i++) {
@@ -784,6 +808,11 @@ public class Activity extends Fragment {
                                 recentAdapter.notifyDataSetChanged();
 
                             }
+                        }else{
+
+                            if(page_no==1)
+                                rv_Transcation.setVisibility(View.INVISIBLE);
+
                         }
                     }
 

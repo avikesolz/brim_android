@@ -2,6 +2,7 @@ package com.brim;
 
 import android.app.AlertDialog;
 import android.content.DialogInterface;
+import android.content.Intent;
 import android.graphics.Color;
 import android.graphics.drawable.ColorDrawable;
 import android.os.Build;
@@ -16,6 +17,7 @@ import android.widget.ImageView;
 import android.widget.LinearLayout;
 import android.widget.Toast;
 
+import com.brim.AppContant.BrimApplication;
 import com.brim.Font.AxiformaBook;
 import com.brim.Font.AxiformaRegular;
 import com.brim.Font.SFNFTextView;

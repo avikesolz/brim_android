@@ -55,12 +55,25 @@
             android:name="com.google.android.gms.version"
             android:value="@integer/google_play_services_version" />
 
-        <!--              The API key for Google Maps-based APIs. -->
+        <!-- The API key for Google Maps-based APIs. -->
         <meta-data
             android:name="com.google.android.geo.API_KEY"
             android:value="AIzaSyDIpRgYbfpKVe6GDw9-08Bki_9dxtpIjR8" />
 
-        <activity android:name=".ProfileDetails"></activity>
+        <activity android:name=".ProfileDetails" />
+        <activity android:name=".ManageCard" />
+        <activity android:name=".Help" />
+        <activity android:name=".FaqDetails" />
+        <activity android:name=".Settings_Notification" />
+        <activity android:name=".TravelNotice" />
+        <activity android:name=".LegalPrivacy" />
+        <activity android:name=".UpdateTravel" />
+        <activity android:name=".FamilyCards" />
+        <activity android:name=".UpgradeLimit" />
+        <activity android:name=".AddUser" />
+        <activity android:name=".RemoveAccount" />
+        <activity android:name=".ChangePin" />
+        <activity android:name=".BalanceTransfer"></activity>
     </application>
 
 </manifest>

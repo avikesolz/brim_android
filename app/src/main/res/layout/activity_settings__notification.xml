@@ -1,0 +1,244 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    android:weightSum="9"
+    tools:context="com.brim.Settings_Notification">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:padding="12dp"
+            android:src="@drawable/ic_icon_back"
+            />
+
+        <com.brim.Font.SFNFBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/back_button"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="Settings &amp; Notifications"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_marginTop="20dp"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:padding="20dp"
+        android:background="@color/white"
+        >
+
+        <com.brim.Font.AxiformaMedium
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Purchases"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:textColor="@color/textDarkGray"
+            />
+
+        <com.brim.Font.AxiformaRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Know when a transaction goes through right away."
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:textSize="11sp"
+            android:textColor="@color/textlightGray"
+            />
+
+
+
+        <Switch
+            android:id="@+id/bt_purchases"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/BrandedSwitch.control"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/BorderGray"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:padding="20dp"
+        android:background="@color/white"
+        >
+
+        <com.brim.Font.AxiformaMedium
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Rewards"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:textColor="@color/textDarkGray"
+            />
+
+        <com.brim.Font.AxiformaRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Celebrate hitting a rewards points goal."
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:textSize="11sp"
+            android:textColor="@color/textlightGray"
+            />
+
+
+
+        <Switch
+            android:id="@+id/bt_rewards"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/BrandedSwitch.control"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/BorderGray"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:padding="20dp"
+        android:background="@color/white"
+        >
+
+        <com.brim.Font.AxiformaMedium
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Payment Due"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:textColor="@color/textDarkGray"
+            />
+
+        <com.brim.Font.AxiformaRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Be reminded 5 days and 24 hours before payment due."
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:textSize="11sp"
+            android:textColor="@color/textlightGray"
+            />
+
+
+
+        <Switch
+            android:id="@+id/bt_pay_due"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/BrandedSwitch.control"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/BorderGray"
+        />
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="0dp"
+        android:layout_weight="1.5"
+        android:padding="20dp"
+        android:background="@color/white"
+        >
+
+        <com.brim.Font.AxiformaMedium
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Credit Limit"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:textColor="@color/textDarkGray"
+            />
+
+        <com.brim.Font.AxiformaRegular
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="Be reminded as you approch your credit limit."
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:textSize="11sp"
+            android:textColor="@color/textlightGray"
+            />
+
+
+
+        <Switch
+            android:id="@+id/bt_cre_limit"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:theme="@style/BrandedSwitch.control"
+            android:layout_alignParentRight="true"
+            android:layout_centerVertical="true"
+            />
+
+
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/BorderGray"
+        />
+
+
+</LinearLayout>

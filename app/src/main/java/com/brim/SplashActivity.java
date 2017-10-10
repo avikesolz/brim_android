@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.os.Handler;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.widget.Toast;
 
 import com.brim.ApiHelper.HTTP_GET_AUTH;
@@ -41,10 +42,18 @@ public class SplashActivity extends AppCompatActivity {
 
         }else{
 
-            if(networkChecking.isConnectingToInternet()==true) {
-                sessionCheck();
-            }else{
-                Toast.makeText(this,getResources().getString(R.string.no_network),Toast.LENGTH_SHORT).show();
+            if(BrimApplication.getInstnace().GetUserId().equals("")){
+
+                startActivity(new Intent(SplashActivity.this,RemoveAccount.class));
+                finish();
+
+            }else {
+
+                if (networkChecking.isConnectingToInternet() == true) {
+                    sessionCheck();
+                } else {
+                    Toast.makeText(this, getResources().getString(R.string.no_network), Toast.LENGTH_SHORT).show();
+                }
             }
 
         }
@@ -92,7 +101,40 @@ public class SplashActivity extends AppCompatActivity {
                             /*startActivity(new Intent(SplashActivity.this,BaseActivity.class));
                             finish();*/
 
-                            startActivity(new Intent(SplashActivity.this,ChooseYourLoginWithOption.class));
+                            Log.d("Passkey-Type","-----------------"+BrimApplication.getInstnace().GetPassType());
+
+                            if(BrimApplication.getInstnace().GetPassType().equals("password")){
+
+                                Intent intent=new Intent(SplashActivity.this, PasswordActivity.class);
+                                intent.putExtra("from","Autologin");
+                                startActivity(intent);
+
+                            }   else if(BrimApplication.getInstnace().GetPassType().equals("pin"))  {
+
+                                Intent intent=new Intent(SplashActivity.this, FinalPinActivity.class);
+                                intent.putExtra("from","Autologin");
+                                startActivity(intent);
+
+                            }
+                            else if(BrimApplication.getInstnace().GetPassType().equals("pattern"))  {
+
+                                Intent intent=new Intent(SplashActivity.this, PatternLockFinalScreen.class);
+                                intent.putExtra("from","Autologin");
+                                startActivity(intent);
+
+                            }else if(BrimApplication.getInstnace().GetPassType().equals("touch"))  {
+
+                                Intent intent=new Intent(SplashActivity.this, FingerPrintFinalActivity.class);
+                                intent.putExtra("from","login");
+                                startActivity(intent);
+
+                            }else{
+
+                                Intent intent=new Intent(SplashActivity.this, ChooseYourLoginWithOption.class);
+                                intent.putExtra("from","login");
+                                startActivity(intent);
+
+                            }
                             finish();
 
                         }
@@ -101,9 +143,11 @@ public class SplashActivity extends AppCompatActivity {
                     BrimApplication.getInstnace().SetAuthToken("");
                     BrimApplication.getInstnace().SetCardId("");
                     BrimApplication.getInstnace().SetUserId("");
+                    BrimApplication.getInstnace().SetEmail("");
                     BrimApplication.getInstnace().SetPass("");
                     BrimApplication.getInstnace().SetName("");
                     BrimApplication.getInstnace().SetPin("");
+                    BrimApplication.getInstnace().SetPassType("");
 
                     new Handler().postDelayed(new Runnable() {
                         @Override

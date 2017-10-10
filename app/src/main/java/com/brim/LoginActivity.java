@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.os.Bundle;
 import android.support.v7.app.AppCompatActivity;
+import android.util.Log;
 import android.view.View;
 import android.widget.Toast;
 
@@ -18,9 +19,13 @@ import com.brim.Utils.NetworkChecking;
 import org.json.JSONException;
 import org.json.JSONObject;
 
+import io.paperdb.Paper;
+
 public class LoginActivity extends AppCompatActivity implements View.OnClickListener {
     AppProgerssDialog progressDialog;
     NetworkChecking networkChecking;
+
+    String save_pattern_key = "pattern_code";
 
 
     @Override
@@ -63,16 +68,66 @@ public class LoginActivity extends AppCompatActivity implements View.OnClickList
 
                                 if(OBject.has("code") && OBject.getString("code").equals("invalid_credentials"))
                                 {
+
                                     new AppAlert(LoginActivity.this).Error(OBject.getString("message"));
+
                                 }else  if(OBject.has("code") && OBject.getString("code").equals("validation_failed")){
+
                                     new AppAlert(LoginActivity.this).Error(OBject.getJSONObject("errors").getJSONObject("email").getString("message"));
-                                }
-                                else {
+
+                                } else {
                                     BrimApplication.getInstnace().SetAuthToken(OBject.getString("auth_token"));
                                     BrimApplication.getInstnace().SetUserId(OBject.getString("id"));
+                                    BrimApplication.getInstnace().SetEmail(((AxiformaBookEditText) findViewById(R.id.EDX_UserName)).getText().toString());
                                     BrimApplication.getInstnace().SetPass(((AxiformaBookEditText) findViewById(R.id.Edx_Password)).getText().toString());
 
-                                    startActivity(new Intent(LoginActivity.this, ChooseYourLoginWithOption.class));
+                                    if(BrimApplication.getInstnace().GetPassType().equals("password")){
+
+                                        Intent intent=new Intent(LoginActivity.this, PasswordActivity.class);
+                                        intent.putExtra("from","login");
+                                        startActivity(intent);
+
+                                    }
+                                    else if(BrimApplication.getInstnace().GetPassType().equals("pin"))  {
+
+                                        Intent intent=new Intent(LoginActivity.this, FinalPinActivity.class);
+                                        intent.putExtra("from","login");
+                                        startActivity(intent);
+
+                                    }
+                                    else if(BrimApplication.getInstnace().GetPassType().equals("pattern"))  {
+
+                                        Paper.init(LoginActivity.this);
+                                        final String save_pattern = Paper.book().read(save_pattern_key);
+
+                                        if (save_pattern != null && !save_pattern.equals(null)) {
+
+                                            Intent intent=new Intent(LoginActivity.this, PatternLockFinalScreen.class);
+                                            intent.putExtra("from","login");
+                                            startActivity(intent);
+
+                                        }else{
+                                            Intent intent=new Intent(LoginActivity.this, PatternLock.class);
+                                            intent.putExtra("from","login");
+                                            startActivity(intent);
+
+                                        }
+
+
+
+                                    } else if(BrimApplication.getInstnace().GetPassType().equals("touch"))  {
+
+                                        Intent intent=new Intent(LoginActivity.this, FingerPrintFinalActivity.class);
+                                        intent.putExtra("from","login");
+                                        startActivity(intent);
+
+                                    }else{
+
+                                        Intent intent=new Intent(LoginActivity.this, ChooseYourLoginWithOption.class);
+                                        intent.putExtra("from","login");
+                                        startActivity(intent);
+
+                                    }
                                     finishAffinity();
                                 }
 

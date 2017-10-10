@@ -1,0 +1,253 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.brim.UpdateTravel">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:padding="12dp"
+            android:src="@drawable/ic_icon_back"
+            />
+
+        <com.brim.Font.SFNFBoldTextView
+            android:id="@+id/txt_header"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/back_button"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="Update Travel Notice"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="2dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/BorderGray"
+        />
+
+
+    <com.brim.Font.AxiformaRegular
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="WHERE ARE YOU GOING?"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:textSize="12sp"
+        android:textColor="@color/textlightGray"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/BorderGray"
+        />
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:padding="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/icon_flight"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:src="@drawable/icon_travel"/>
+
+        <com.brim.Font.SFNFEditText
+            android:id="@+id/et_location"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/icon_flight"
+            android:gravity="center_vertical"
+            android:background="@android:color/transparent"
+            android:textSize="14sp"
+            android:hint="Enter Location"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="@color/textDarkGray"
+            />
+
+        <com.brim.Font.SFNFTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/icon_flight"
+            android:text="Location"
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:textSize="11sp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="@color/textlightGray"
+            />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/BorderGray"
+        />
+
+
+    <com.brim.Font.AxiformaRegular
+        android:layout_width="match_parent"
+        android:layout_height="40dp"
+        android:text="WHEN ARE YOU GOING?"
+        android:gravity="center_vertical"
+        android:paddingLeft="20dp"
+        android:paddingRight="20dp"
+        android:layout_marginTop="20dp"
+        android:background="@color/white"
+        android:textSize="12sp"
+        android:textColor="@color/textlightGray"
+        />
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/BorderGray"
+        />
+
+    <RelativeLayout
+        android:id="@+id/button_depart"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:padding="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/icon_cal"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:src="@drawable/icon_calendar"/>
+
+        <com.brim.Font.SFNFTextView
+            android:id="@+id/txt_departure"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/icon_cal"
+            android:text="Set Departure Date"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="@color/textDarkGray"
+            />
+
+        <com.brim.Font.SFNFTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/icon_cal"
+            android:text="Departure Date"
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:textSize="11sp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="@color/textlightGray"
+            />
+
+
+    </RelativeLayout>
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/BorderGray"
+        />
+
+    <RelativeLayout
+        android:id="@+id/button_arriv"
+        android:layout_width="match_parent"
+        android:layout_height="80dp"
+        android:background="@color/white"
+        android:padding="20dp"
+        >
+
+        <ImageView
+            android:id="@+id/icon_cal2"
+            android:layout_width="40dp"
+            android:layout_height="40dp"
+            android:padding="10dp"
+            android:src="@drawable/icon_calendar"/>
+
+        <com.brim.Font.SFNFTextView
+            android:id="@+id/txt_arrival"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/icon_cal2"
+            android:gravity="center_vertical"
+            android:textSize="14sp"
+            android:text="Set Arrival Date"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="@color/textDarkGray"
+            />
+
+        <com.brim.Font.SFNFTextView
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/icon_cal2"
+            android:text="Arrival Date"
+            android:gravity="center_vertical"
+            android:layout_alignParentBottom="true"
+            android:textSize="11sp"
+            android:paddingLeft="20dp"
+            android:paddingRight="20dp"
+            android:textColor="@color/textlightGray"
+            />
+
+
+    </RelativeLayout>
+
+
+
+    <RelativeLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <com.brim.Font.AxiformaMedium
+            android:id="@+id/button_update"
+            android:layout_width="match_parent"
+            android:layout_height="60dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/colorPrimaryDark"
+            android:textColor="@color/white"
+            android:text="Update Travel Notice"
+            android:textSize="15sp"
+            android:gravity="center"
+            />
+    </RelativeLayout>
+
+</LinearLayout>

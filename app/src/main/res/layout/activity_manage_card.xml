@@ -1,0 +1,388 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent"
+    android:orientation="vertical"
+    tools:context="com.brim.ManageCard">
+
+    <RelativeLayout
+        android:id="@+id/top_bar"
+        android:layout_width="match_parent"
+        android:background="@color/white"
+        android:layout_height="45dp">
+
+        <ImageView
+            android:id="@+id/back_button"
+            android:layout_width="40dp"
+            android:layout_height="45dp"
+            android:layout_marginLeft="10dp"
+            android:padding="12dp"
+            android:src="@drawable/ic_icon_back"
+            />
+
+        <com.brim.Font.SFNFBoldTextView
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_toRightOf="@+id/back_button"
+            android:layout_centerVertical="true"
+            android:layout_marginLeft="20dp"
+            android:text="Manage Card"
+            android:textColor="@color/colorPrimary"
+            android:textSize="14sp" />
+
+
+    </RelativeLayout>
+
+    <android.support.v4.widget.NestedScrollView
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            >
+
+            <RelativeLayout
+                android:id="@+id/card_view"
+                android:layout_width="280dp"
+                android:layout_height="170dp"
+                android:layout_marginTop="20dp"
+                android:background="#FFFFFF"
+                android:layout_centerHorizontal="true"
+
+                >
+
+                <ImageView
+                    android:layout_width="280dp"
+                    android:layout_height="170dp"
+                    android:background="@drawable/card"
+                    />
+
+                <RelativeLayout
+                    android:layout_width="100dp"
+                    android:layout_height="30dp"
+                    android:layout_centerVertical="true"
+                    android:layout_alignParentRight="true"
+                    >
+
+                    <com.brim.Font.AxiformaBook
+                        android:id="@+id/txt_card_no"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="0000"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        />
+
+
+                </RelativeLayout>
+
+                <RelativeLayout
+                    android:layout_width="130dp"
+                    android:layout_height="25dp"
+                    android:layout_alignParentBottom="true"
+                    >
+
+                    <com.brim.Font.AxiformaBook
+                        android:id="@+id/txt_exp_date"
+                        android:layout_width="wrap_content"
+                        android:layout_height="wrap_content"
+                        android:text="**/**"
+                        android:layout_centerHorizontal="true"
+                        android:textColor="#FFFFFF"
+                        android:textSize="12sp"
+                        />
+
+
+                </RelativeLayout>
+
+
+
+            </RelativeLayout>
+
+            <LinearLayout
+                android:layout_below="@+id/card_view"
+                android:layout_width="match_parent"
+                android:layout_height="match_parent"
+                android:orientation="vertical"
+                >
+                
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:layout_marginTop="20dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    >
+
+                    <com.brim.Font.AxiformaMedium
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="CREDIT LIMIT"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:textColor="@color/textlightGray"
+                        />
+
+                    <com.brim.Font.AxiformaMedium
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:text="FAMILY CARDS"
+                        android:gravity="center"
+                        android:textSize="11sp"
+                        android:textColor="@color/textlightGray"
+                        />
+
+
+                </LinearLayout>
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="30dp"
+                    android:weightSum="2"
+                    android:orientation="horizontal"
+                    >
+
+                    <com.brim.Font.AxiformaMedium
+                        android:id="@+id/txt_limit"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="@color/textDarkGray"
+                        />
+
+                    <com.brim.Font.AxiformaMedium
+                        android:id="@+id/txt_member"
+                        android:layout_width="0dp"
+                        android:layout_height="match_parent"
+                        android:layout_weight="1"
+                        android:gravity="center"
+                        android:textSize="14sp"
+                        android:textColor="@color/textDarkGray"
+                        />
+
+
+                </LinearLayout>
+
+
+                <LinearLayout
+                    android:layout_width="match_parent"
+                    android:layout_height="wrap_content"
+                    android:layout_marginTop="20dp"
+                    android:orientation="vertical"
+                    android:background="@color/white"
+                    >
+
+                    <RelativeLayout
+                        android:id="@+id/button_adduser"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingLeft="20dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/add"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/icon_family"
+                            />
+
+                        <com.brim.Font.AxiformaMedium
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/add"
+                            android:text="Add Authorized User"
+                            android:textSize="14sp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:layout_centerVertical="true"
+                            android:textColor="@color/textDarkGray"
+                            />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/BorderGray"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/button_inc_limit"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingLeft="20dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/limit"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/icon_increaselimit"
+                            />
+
+                        <com.brim.Font.AxiformaMedium
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/limit"
+                            android:text="Increase Credit Limit"
+                            android:textSize="14sp"
+                            android:layout_centerVertical="true"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:textColor="@color/textDarkGray"
+                            />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/BorderGray"
+                        />
+
+
+                    <RelativeLayout
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingLeft="20dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/insurance"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/icon_insurance"
+                            />
+
+                        <com.brim.Font.AxiformaMedium
+                            android:layout_width="match_parent"
+                            android:layout_height="25dp"
+                            android:layout_toRightOf="@+id/insurance"
+                            android:text="Balance Protection Insurance"
+                            android:layout_centerVertical="true"
+                            android:textSize="14sp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:textColor="@color/textDarkGray"
+                            />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/BorderGray"
+                        />
+
+
+                    <RelativeLayout
+                        android:id="@+id/button_balTransfer"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingLeft="20dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/transfer"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:padding="2dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/icon_transfer"
+                            />
+
+                        <com.brim.Font.AxiformaMedium
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/transfer"
+                            android:text="Balance Transfer"
+                            android:layout_centerVertical="true"
+
+                            android:textSize="14sp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:textColor="@color/textDarkGray"
+                            />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/BorderGray"
+                        />
+
+                    <RelativeLayout
+                        android:id="@+id/txt_crelimit"
+                        android:layout_width="match_parent"
+                        android:layout_height="50dp"
+                        android:paddingLeft="20dp"
+                        >
+
+                        <ImageView
+                            android:id="@+id/pin"
+                            android:layout_width="25dp"
+                            android:layout_height="25dp"
+                            android:layout_centerVertical="true"
+                            android:src="@drawable/icon_changepin"
+                            />
+
+                        <com.brim.Font.AxiformaMedium
+                            android:layout_width="match_parent"
+                            android:layout_height="wrap_content"
+                            android:layout_toRightOf="@+id/pin"
+                            android:layout_centerVertical="true"
+                            android:text="Change PIN"
+                            android:textSize="14sp"
+                            android:paddingLeft="20dp"
+                            android:paddingRight="20dp"
+                            android:textColor="@color/textDarkGray"
+                            />
+
+                    </RelativeLayout>
+
+                    <View
+                        android:layout_width="match_parent"
+                        android:layout_height="1dp"
+                        android:layout_alignParentBottom="true"
+                        android:background="@color/BorderGray"
+                        />
+
+
+
+                </LinearLayout>
+
+
+
+            </LinearLayout>
+
+
+
+
+        </RelativeLayout>
+
+
+
+    </android.support.v4.widget.NestedScrollView>
+
+
+
+
+
+</LinearLayout>

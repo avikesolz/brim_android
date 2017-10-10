@@ -75,15 +75,19 @@ public class RedemptionAdapter extends RecyclerView.Adapter<RedemptionAdapter.Vi
                 holder.TXT_date.setText(date);
             }
 
+            if(List.get(position).getItemObject().getBoolean("eligible_for_redemption")) {
 
-            if(List.get(position).getItemObject().getBoolean("redemption_flag")) {
-                holder.button_redeem.setBackgroundColor(Color.parseColor("#FFFFFF"));
-                holder.button_redeem.setText("Redeemed");
+                if (List.get(position).getItemObject().getBoolean("redemption_flag")) {
+                    holder.button_redeem.setBackgroundColor(Color.parseColor("#FFFFFF"));
+                    holder.button_redeem.setText("Redeemed");
 
-            }
-            else {
-                holder.button_redeem.setText("Redeem");
-                holder.button_redeem.setBackgroundResource(R.drawable.mold_rectangle_blue_white);
+                } else {
+                    holder.button_redeem.setText("Redeem");
+                    holder.button_redeem.setBackgroundResource(R.drawable.mold_rectangle_blue_white);
+                }
+            }else{
+                holder.button_redeem.setVisibility(View.GONE);
+
             }
 
 

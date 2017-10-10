@@ -78,8 +78,8 @@ public abstract class HTTP_PATCH_AUTH {
 
 
 
-                    Loger.MSG("GET @@", "" + localApi);
-                    Loger.MSG("GET @@", "" + responseString);
+                    Loger.MSG("PATCH @@", "" + localApi);
+                    Loger.MSG("PATCH @@", "" + responseString);
 
                 } catch (Exception e) {
                     e.printStackTrace();

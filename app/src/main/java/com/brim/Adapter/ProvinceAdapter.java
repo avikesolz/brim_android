@@ -7,6 +7,7 @@ import android.view.View;
 import android.view.ViewGroup;
 import android.widget.TextView;
 
+import com.brim.AddUser;
 import com.brim.Pojo.SpinnerSetGet;
 import com.brim.ProfileDetails;
 import com.brim.R;
@@ -22,12 +23,20 @@ public class ProvinceAdapter extends RecyclerView.Adapter<ProvinceAdapter.ViewHo
     Dialog dialog;
     ArrayList<SpinnerSetGet> list;
     ProfileDetails profileDetails;
+    AddUser addUser;
 
     public ProvinceAdapter(Dialog dialog,   ArrayList<SpinnerSetGet> list,  ProfileDetails profileDetails) {
 
         this.dialog=dialog;
         this.list=list;
         this.profileDetails=profileDetails;
+    }
+
+    public ProvinceAdapter(Dialog dialog, ArrayList<SpinnerSetGet> list, AddUser addUser) {
+
+        this.dialog=dialog;
+        this.list=list;
+        this.addUser=addUser;
     }
 
     @Override
@@ -45,8 +54,14 @@ public class ProvinceAdapter extends RecyclerView.Adapter<ProvinceAdapter.ViewHo
         holder.itemView.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                profileDetails.updateTxt(list.get(position).getCode());
-                dialog.cancel();
+
+                if (profileDetails!=null) {
+                    profileDetails.updateTxt(list.get(position).getCode());
+                    dialog.cancel();
+                }else if (addUser!=null){
+                    addUser.updateTxt(list.get(position).getCode());
+                    dialog.cancel();
+                }
             }
         });
     }
@@ -64,6 +79,7 @@ public class ProvinceAdapter extends RecyclerView.Adapter<ProvinceAdapter.ViewHo
             super(itemView);
 
             txt_province=(TextView) itemView.findViewById(R.id.txt_province);
+
         }
     }
 }

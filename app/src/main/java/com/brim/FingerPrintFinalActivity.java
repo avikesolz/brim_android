@@ -17,6 +17,7 @@ import android.widget.TextView;
 import android.widget.Toast;
 
 import com.brim.ApiHelper.FingerprintHandeler;
+import com.brim.AppContant.BrimApplication;
 
 import java.io.IOException;
 import java.security.InvalidAlgorithmParameterException;
@@ -169,9 +170,54 @@ public class FingerPrintFinalActivity extends AppCompatActivity {
 
     public void SuccessfullyMatched(){
 
-        startActivity(new Intent(FingerPrintFinalActivity.this,BaseActivity.class));
-        finishAffinity();
+        BrimApplication.getInstnace().SetPassType("touch");
+
+
+        if(getIntent().getExtras().getString("from").equals("login")) {
+
+            startActivity(new Intent(FingerPrintFinalActivity.this, BaseActivity.class));
+            finishAffinity();
+
+
+        }else  if(getIntent().getExtras().getString("from").equals("Autologin")) {
+
+            startActivity(new Intent(FingerPrintFinalActivity.this, BaseActivity.class));
+            finishAffinity();
+
+
+        }else  if(getIntent().getExtras().getString("from").equals("account")) {
+
+            Intent intent=new Intent(FingerPrintFinalActivity.this, ChooseYourLoginWithOption.class);
+            intent.putExtra("from","account");
+            startActivity(intent);
+            finish();
+
+
+        }else  if(getIntent().getExtras().getString("from").equals("newsetup")) {
+
+            finish();
+
+        }
 
     }
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+
+        Intent intent=new Intent(FingerPrintFinalActivity.this, FingerPrintActivity.class);
+
+        if(getIntent().getExtras().getString("from").equals("login")) {
+
+            intent.putExtra("from","login");
+            startActivity(intent);
+
+        }else  if(getIntent().getExtras().getString("from").equals("newsetup")) {
+
+            intent.putExtra("from","newsetup");
+            startActivity(intent);
+
+        }
+    }
 }

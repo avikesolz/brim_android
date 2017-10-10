@@ -14,6 +14,7 @@ import android.widget.Toast;
 import com.andrognito.patternlockview.PatternLockView;
 import com.andrognito.patternlockview.listener.PatternLockViewListener;
 import com.andrognito.patternlockview.utils.PatternLockUtils;
+import com.brim.AppContant.BrimApplication;
 
 import java.util.List;
 
@@ -35,22 +36,48 @@ public class PatternLock extends AppCompatActivity {
 
     boolean PatterMatched = false;
 
+    String save_pattern;
+
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pattern_lock);
 
-        Paper.init(this);
-        final String save_pattern = Paper.book().read(save_pattern_key);
+        if(getIntent().getExtras().getString("from").equals("newsetup")){
+
+            save_pattern=null;
+
+        }else{
+
+            Paper.init(this);
+            save_pattern = Paper.book().read(save_pattern_key);
+        }
+
+
 
         if (save_pattern != null && !save_pattern.equals(null)) {
 
-            Log.v("PatternLockIn::::", "If");
+            //Log.v("PatternLockIn::::", "If");
+
+
+            BrimApplication.getInstnace().SetPassType("pattern");
 
             Intent intent = new Intent(PatternLock.this,PatternLockFinalScreen.class);
+
+            if(getIntent().getExtras().getString("from").equals("login")){
+
+                intent.putExtra("from","login");
+
+            } else  if(getIntent().getExtras().getString("from").equals("newsetup")) {
+
+                intent.putExtra("from","newsetup");
+
+            }
+
             startActivity(intent);
             finish();
+
 
 
         } else {
@@ -149,8 +176,17 @@ public class PatternLock extends AppCompatActivity {
 
                         if (PatterMatched) {
 
-                            startActivity(new Intent(PatternLock.this, BaseActivity.class));
-                            finishAffinity();
+                            BrimApplication.getInstnace().SetPassType("pattern");
+
+
+                            if(getIntent().getExtras().getString("from").equals("login")){
+
+                                startActivity(new Intent(PatternLock.this, BaseActivity.class));
+                                finishAffinity();
+                            } else  if(getIntent().getExtras().getString("from").equals("newsetup")) {
+
+                                finish();
+                            }
 
                         }
 
@@ -195,5 +231,26 @@ public class PatternLock extends AppCompatActivity {
 
         }
 
+    }
+
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intent=new Intent(PatternLock.this,ChooseYourLoginWithOption.class);
+
+        if(getIntent().getExtras().getString("from").equals("login")){
+
+            intent.putExtra("from","login");
+
+        } else  if(getIntent().getExtras().getString("from").equals("newsetup")) {
+
+            intent.putExtra("from","account");
+
+        }
+
+        startActivity(intent);
+
+        finish();
     }
 }

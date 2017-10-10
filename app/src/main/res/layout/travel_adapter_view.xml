@@ -1,0 +1,74 @@
+<?xml version="1.0" encoding="utf-8"?>
+<LinearLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:layout_width="match_parent"
+    android:layout_height="wrap_content"
+    android:orientation="vertical"
+    android:background="@color/white"
+    >
+    <com.brim.Utils.SwipeLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content">
+
+    <RelativeLayout
+        android:id="@+id/button_delete"
+        android:layout_width="100dp"
+        android:background="@color/textDarkGray"
+        android:layout_height="match_parent">
+
+        <com.brim.Font.AxiformaRegular
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_centerInParent="true"
+            android:textSize="14sp"
+            android:textColor="@color/white"
+            android:text="Delete"
+            />
+
+    </RelativeLayout>
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="wrap_content"
+        android:orientation="horizontal"
+        android:padding="20dp"
+        android:weightSum="2"
+        >
+
+        <com.brim.Font.SFNFTextView
+            android:id="@+id/txt_place"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text="Call Member Services"
+            android:singleLine="true"
+            android:textSize="14sp"
+            android:textColor="@color/textDarkGray"
+            />
+
+
+        <com.brim.Font.SFNFTextView
+            android:id="@+id/txt_date"
+            android:layout_width="0dp"
+            android:layout_height="wrap_content"
+            android:layout_weight="1"
+            android:text=""
+            android:singleLine="true"
+            android:gravity="right"
+            android:textSize="14sp"
+            android:textColor="@color/textDarkGray"
+            />
+
+
+    </LinearLayout>
+
+    </com.brim.Utils.SwipeLayout>
+
+
+    <View
+        android:layout_width="match_parent"
+        android:layout_height="1dp"
+        android:layout_alignParentBottom="true"
+        android:background="@color/BorderGray"
+        />
+
+</LinearLayout>

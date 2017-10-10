@@ -25,10 +25,18 @@ public class PinActivity extends AppCompatActivity {
     LinearLayout Button_Submit;
 
     String TempPin = null;
+    String TempPrvPin="";
 
     @Override
     protected void onCreate(Bundle savedInstanceState) {
         super.onCreate(savedInstanceState);
+
+        if(getIntent().getExtras().getString("from").equals("newsetup")){
+
+            TempPrvPin=BrimApplication.getInstnace().GetPin();
+            BrimApplication.getInstnace().SetPin("");
+
+        }
 
         if (BrimApplication.getInstnace().GetPin().equals("")){
 
@@ -57,7 +65,21 @@ public class PinActivity extends AppCompatActivity {
 
                             BrimApplication.getInstnace().SetPin(TempPin);
 
-                            startActivity(new Intent(PinActivity.this, FinalPinActivity.class));
+                            Intent intent=new Intent(PinActivity.this, FinalPinActivity.class);
+
+                            if(getIntent().getExtras().getString("from").equals("login")){
+
+                                intent.putExtra("from","login");
+
+                            } else  if(getIntent().getExtras().getString("from").equals("newsetup")) {
+
+                                intent.putExtra("from","newsetup");
+
+                            }
+
+                            startActivity(intent);
+
+                            finish();
 
                         }
 
@@ -68,7 +90,26 @@ public class PinActivity extends AppCompatActivity {
             });
 
         }else {
-            startActivity(new Intent(PinActivity.this,FinalPinActivity.class));
+
+            Intent intent=new Intent(PinActivity.this, FinalPinActivity.class);
+
+             if(getIntent().getExtras().getString("from").equals("login")){
+
+                intent.putExtra("from","login");
+
+            }/*else if(getIntent().getExtras().getString("from").equals("autologin")){
+
+                intent.putExtra("from","autologin");
+
+            }else if(getIntent().getExtras().getString("from").equals("account")){
+
+                intent.putExtra("from","account");
+
+            }*/
+
+            startActivity(intent);
+            finish();
+
         }
 
 
@@ -111,5 +152,28 @@ public class PinActivity extends AppCompatActivity {
         }
     };
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        BrimApplication.getInstnace().SetPin(TempPrvPin);
+
+        Intent intent=new Intent(PinActivity.this,ChooseYourLoginWithOption.class);
+
+        if(getIntent().getExtras().getString("from").equals("login")){
+
+            intent.putExtra("from","login");
+
+        } else  if(getIntent().getExtras().getString("from").equals("newsetup")) {
+
+            intent.putExtra("from","account");
+
+        }
+
+        startActivity(intent);
+
+        finish();
+
+    }
 }
 

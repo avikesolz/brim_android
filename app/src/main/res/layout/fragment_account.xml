@@ -241,6 +241,44 @@
             />
 
         <RelativeLayout
+            android:id="@+id/button_signin_m"
+            android:layout_width="match_parent"
+            android:layout_height="0dp"
+            android:layout_weight="1"
+            android:paddingLeft="30dp"
+            android:background="@color/white"
+            android:gravity="center_vertical"
+            >
+
+            <ImageView
+                android:id="@+id/signin_icon"
+                android:layout_width="25dp"
+                android:layout_height="25dp"
+                android:src="@drawable/pin_icon"
+                />
+
+            <com.brim.Font.SFNFTextView
+                android:layout_width="wrap_content"
+                android:layout_height="25dp"
+                android:layout_toRightOf="@+id/signin_icon"
+                android:layout_marginLeft="25dp"
+                android:text="Sign-in Method"
+                android:gravity="center"
+                android:textSize="14sp"
+                android:textColor="@color/textmediamGray"
+                />
+
+
+        </RelativeLayout>
+
+        <View
+            android:layout_width="match_parent"
+            android:layout_height="1dp"
+            android:layout_alignParentBottom="true"
+            android:background="@color/BorderGray"
+            />
+
+        <RelativeLayout
             android:id="@+id/button_logout"
             android:layout_width="match_parent"
             android:layout_height="0dp"

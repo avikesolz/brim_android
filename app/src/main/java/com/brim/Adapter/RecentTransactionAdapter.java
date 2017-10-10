@@ -4,6 +4,7 @@ import android.content.Context;
 import android.content.Intent;
 import android.support.v4.app.FragmentActivity;
 import android.support.v7.widget.RecyclerView;
+import android.util.Log;
 import android.view.LayoutInflater;
 import android.view.View;
 import android.view.ViewGroup;
@@ -71,6 +72,8 @@ public class RecentTransactionAdapter extends RecyclerView.Adapter<RecentTransac
 
         try {
             holder.TXT_Name.setText(item.getItemObject().getString("description"));
+
+            if (item.getImage()!=null)
             holder.TXT_Type.setText(item.getItemObject().getJSONObject("category").getString("name"));
 
             if(dashBoard!=null) {
@@ -83,6 +86,8 @@ public class RecentTransactionAdapter extends RecyclerView.Adapter<RecentTransac
                     holder.TXT_PRICE1.setText("$"+ ConvertLocal.priceWithDecimal(Double.parseDouble(item.getItemObject().getString("amount"))));
 
                 } else if (activity.tab_status.equals("INSTALL")) {
+
+                    if (item.getPrice()!=null)
                     holder.TXT_PRICE1.setText("$"+ ConvertLocal.priceWithDecimal(Double.parseDouble(item.getPrice())));
 
                 }

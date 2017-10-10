@@ -4,6 +4,7 @@ import android.content.Intent;
 import android.graphics.Color;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -33,6 +34,8 @@ public class PatternLockFinalScreen extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_pattern_lock_final_screen);
 
+        Log.d("from","-----------------------"+getIntent().getExtras().getString("from"));
+
         button_signin= (LinearLayout) findViewById(R.id.button_signin);
         txt_name= (TextView) findViewById(R.id.txt_name);
         txt_name.setText("Welcome back, "+ BrimApplication.getInstnace().GetName());
@@ -61,10 +64,33 @@ public class PatternLockFinalScreen extends AppCompatActivity {
                 if (final_pattern.equals(save_pattern)) {
 
 
-                    startActivity(new Intent(PatternLockFinalScreen.this,BaseActivity.class));
+                    BrimApplication.getInstnace().SetPassType("pattern");
 
-                    finishAffinity();
+                    if(getIntent().getExtras().getString("from").equals("login")) {
 
+                        startActivity(new Intent(PatternLockFinalScreen.this, BaseActivity.class));
+                        finishAffinity();
+
+
+                    }else  if(getIntent().getExtras().getString("from").equals("Autologin")) {
+
+                        startActivity(new Intent(PatternLockFinalScreen.this, BaseActivity.class));
+                        finishAffinity();
+
+
+                    }else  if(getIntent().getExtras().getString("from").equals("account")) {
+
+                        Intent intent=new Intent(PatternLockFinalScreen.this, ChooseYourLoginWithOption.class);
+                        intent.putExtra("from","account");
+                        startActivity(intent);
+                        finish();
+
+
+                    }else  if(getIntent().getExtras().getString("from").equals("newsetup")) {
+
+                        finish();
+
+                    }
 
                     mPatternLockView.clearPattern();
 
@@ -88,8 +114,20 @@ public class PatternLockFinalScreen extends AppCompatActivity {
         button_signin.setOnClickListener(new View.OnClickListener() {
             @Override
             public void onClick(View view) {
-                startActivity(new Intent(PatternLockFinalScreen.this,ChooseYourLoginWithOption.class));
-                finishAffinity();
+
+                Intent intent=new Intent(PatternLockFinalScreen.this,PasswordActivity.class);
+
+                if(getIntent().getExtras().getString("from").equals("login")){
+
+                    intent.putExtra("from","login");
+
+                } else  if(getIntent().getExtras().getString("from").equals("newsetup")) {
+
+                    intent.putExtra("from","account");
+
+                }
+                startActivity(intent);
+                finish();
             }
         });
 

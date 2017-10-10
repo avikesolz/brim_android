@@ -37,6 +37,7 @@ import com.brim.Utils.Loger;
 import org.json.JSONArray;
 import org.json.JSONException;
 import org.json.JSONObject;
+import org.json.JSONTokener;
 
 import java.util.ArrayList;
 import java.util.LinkedList;
@@ -230,7 +231,7 @@ public class DashBoard extends Fragment {
 
                     card_id=Object.getString("id");
                     BrimApplication.getInstnace().SetCardId(card_id);
-                    //BrimApplication.getInstnace().SetPoints(Object.getString("current_points_balance"));
+                    BrimApplication.getInstnace().SetPrimaryCardType(Object.getString("primary"));
 
                     getOffer(card_id);                      //**********  ****call offer details****************
 
@@ -360,7 +361,19 @@ public class DashBoard extends Fragment {
                             for (int i = 0; i < transactions.length(); i++) {
                                 TransactionListData datat = new TransactionListData();
                                 datat.setItemObject(transactions.getJSONObject(i));
-                                datat.setImage(AppConstant.IMAGE_URL + transactions.getJSONObject(i).getJSONObject("category").getString("id") + ".png");
+
+                                Object intervention = transactions.getJSONObject(i).get("category");
+                                if (intervention instanceof JSONArray) {
+                                    // It's an array
+                                    //JSONArray jsonArray = (JSONArray)intervention;
+                                }
+                                else if (intervention instanceof JSONObject) {
+                                    // It's an object
+                                    //JSONObject jsonObject = (JSONObject)intervention;
+                                    datat.setImage(AppConstant.IMAGE_URL + transactions.getJSONObject(i).getJSONObject("category").getString("id") + ".png");
+
+                                }
+
 
                                 //Log.d("Image url","::::"+AppConstant.IMAGE_URL+transactions.getJSONObject(i).getJSONObject("category").getString("id")+".png");
 

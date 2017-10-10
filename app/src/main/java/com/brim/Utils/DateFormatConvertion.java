@@ -28,6 +28,24 @@ public class DateFormatConvertion {
         return str;
     }
 
+    public static String yyyymmdd_to_mmmmddyyyy(String time) {
+        String inputPattern = "yyyy-MM-dd";
+        String outputPattern = "MMMM dd, yyyy";
+        SimpleDateFormat inputFormat = new SimpleDateFormat(inputPattern);
+        SimpleDateFormat outputFormat = new SimpleDateFormat(outputPattern);
+
+        Date date = null;
+        String str = null;
+
+        try {
+            date = inputFormat.parse(time);
+            str = outputFormat.format(date);
+        } catch (ParseException e) {
+            e.printStackTrace();
+        }
+        return str;
+    }
+
     public static String yyyymmdd_to_mmdd(String time) {
         String inputPattern = "yyyy-MM-dd";
         String outputPattern = "dd MMM";

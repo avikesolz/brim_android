@@ -3,6 +3,7 @@ package com.brim;
 import android.content.Intent;
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
+import android.util.Log;
 import android.view.View;
 import android.widget.LinearLayout;
 import android.widget.TextView;
@@ -30,6 +31,11 @@ public class FinalPinActivity extends AppCompatActivity {
         super.onCreate(savedInstanceState);
         setContentView(R.layout.activity_final_pin);
 
+
+        Log.d("from","-----------------------"+getIntent().getExtras().getString("from"));
+
+        Log.d("PIN","-----------------------"+BrimApplication.getInstnace().GetPin());
+
         mPinLockView = (PinLockView) findViewById(R.id.pin_lock_view_final);
         mIndicatorDots = (IndicatorDots) findViewById(R.id.indicator_dots_final);
 
@@ -51,9 +57,34 @@ public class FinalPinActivity extends AppCompatActivity {
 
                         if (BrimApplication.getInstnace().GetPin().equals(TempPin)){
 
-                            startActivity(new Intent(FinalPinActivity.this, BaseActivity.class));
+                            BrimApplication.getInstnace().SetPassType("pin");
 
-                            finishAffinity();
+                            if(getIntent().getExtras().getString("from").equals("login")) {
+
+                                startActivity(new Intent(FinalPinActivity.this, BaseActivity.class));
+                                finishAffinity();
+
+
+                            }else  if(getIntent().getExtras().getString("from").equals("Autologin")) {
+
+                                startActivity(new Intent(FinalPinActivity.this, BaseActivity.class));
+                                finishAffinity();
+
+
+                            }else  if(getIntent().getExtras().getString("from").equals("account")) {
+
+                                Intent intent=new Intent(FinalPinActivity.this, ChooseYourLoginWithOption.class);
+                                intent.putExtra("from","account");
+                                startActivity(intent);
+                                finish();
+
+
+                            }else  if(getIntent().getExtras().getString("from").equals("newsetup")) {
+
+                                finish();
+
+                            }
+
 
                         }else {
 
@@ -118,4 +149,22 @@ public class FinalPinActivity extends AppCompatActivity {
         }
     };
 
+    @Override
+    public void onBackPressed() {
+        super.onBackPressed();
+
+        Intent intent=new Intent(FinalPinActivity.this, PinActivity.class);
+
+        if(getIntent().getExtras().getString("from").equals("login")) {
+
+            intent.putExtra("from","login");
+            startActivity(intent);
+
+        }else  if(getIntent().getExtras().getString("from").equals("newsetup")) {
+
+            intent.putExtra("from","newsetup");
+            startActivity(intent);
+
+        }
+    }
 }
